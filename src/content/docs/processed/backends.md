@@ -1,0 +1,75 @@
+The concept of `backend` refers to the origin servers providing the necessary data to populate your endpoints. A backend can be something like your HTTP-based API, a Lambda function, or a Kafka queue, for example.
+
+A `backend` can be any server inside or outside your network if it is reachable by Pucora. For instance, you can create endpoints fetching data from your internal servers and enrich them by adding third-party data from an external API like Github, Facebook, or other services. You can also return everything aggregated in a single glorified response.
+
+A `backend` object is an array of all the services that an [`endpoint`](/docs/endpoints/) connects to. It defines the list of hostnames connected to and the URL to send or receive the data. If a backend has more than one `host`, then the array is the [egress load balancing list](/docs/throttling/load-balancing/#balancing-egress-traffic-to-upstream).
+
+When a Pucora endpoint is hit, the engine requests **all defined backends in parallel** (unless a [sequential proxy](/docs/endpoints/sequential-proxy/) is used) and the content [merged and aggregated](/docs/endpoints/response-manipulation/#aggregation-and-merging) (unless you just proxy using the [`no-op` encoding](/docs/endpoints/no-op/)). The returned content is parsed according to its `encoding` or in some cases its `extra_config` configuration.
+
+> **Returned status codes and headers**
+>
+> Because Pucora is not a reverse proxy, the status code and headers returned depends on factors like the type of encoding and the configuration you have chosen. See [Status Codes](/docs/endpoints/status-codes/) and (Returning the backend headers and errors)[/docs/backends/detailed-errors/] for more details.
+
+## Backend/Upstream configuration
+Inside the `backend` array, you need to create an object for each upstream service used by its declaring endpoint. The combination of `host` + `url_pattern`set the full URL that Pucora will use to fetch your upstream services. Most of the backends will require a simple configuration like:
+```json
+{
+    "host": ["http://your-api"],
+    "url_pattern": "/url"
+}
+```
+
+The `url_pattern` accepts `{variables}` from the endpoint definition, and on  you can also inject headers with patterns like `/{input_headers.X-Tenant}/foo`
+
+All the options relative to the **backend definition** are:
+
+
+
+> **Schema reference:** `backend.json` — see [pucora-schema](https://github.com/pucora/pucora-schema).
+
+
+
+Other configuration options such as the ones for [data manipulation](/docs/backends/data-manipulation/) are available. You will find them in each specific feature section.
+
+## Backend configuration example
+In the example below, Pucora offers an endpoint `/v1/products` that merges the content from two different services using the URLs `/products` and `/offers`. The marketing (`marketing.myapi.com`) and the products (`products-XX.myapi.com`) API requests are fired simultaneously. Pucora will load-balance among the listed hosts (here or in your [service discovery](/docs/backends/service-discovery/)) to pick one of the three hosts.
+
+```json
+{
+    "endpoints": [
+        {
+            "endpoint": "/v1/products",
+            "method": "GET",
+            "backend": [
+                {
+                    "url_pattern": "/products",
+                    "host": [
+                        "https://products-01.myapi.com:8000",
+                        "https://products-02.myapi.com:8000",
+                        "https://products-03.myapi.com:8000"
+                    ]
+                },
+                {
+                    "url_pattern": "/offers",
+                    "host": [
+                        "https://marketing.myapi.com:8000"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+```
+
+## Connecting to HTTPS backends with self-signed certificates
+When using **self-signed certificates** in your backends, you must add the certificates to the local CA, or at least add them while developing the `allow_insecure_connections` setting to `true`. Example:
+
+```json
+{
+  "version": 3,
+  "client_tls": {
+        "allow_insecure_connections": true
+  },
+  "endpoints": []
+}
+```

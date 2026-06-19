@@ -20,7 +20,7 @@ export function ProductsIndex() {
                 <Link to={`/products/${p.slug}`}>
                   <Card hover className="h-full">
                     <p className="text-sm font-medium text-accent">{p.tagline}</p>
-                    <h3 className="mt-2 text-xl font-bold text-white">{p.name}</h3>
+                    <h3 className="mt-2 text-xl font-bold text-foreground">{p.name}</h3>
                     <p className="mt-3 text-sm text-muted">{p.description}</p>
                   </Card>
                 </Link>

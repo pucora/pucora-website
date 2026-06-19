@@ -1,0 +1,180 @@
+**mTLS** is an authentication mechanism used traditionally in business-to-business (B2B) applications where clients provide a certificate that allows to connect to the Pucora server.
+
+As Pucora is a piece of software in the middle of two parts, there are different types of mTLS supported, that can work together or separately.
+
+![mtls.mmd diagram](/images/documentation/diagrams/mtls.mmd.svg)
+
+1. **Service mTLS**: When you require end-users to provide a certificate to connect to Pucora.
+2. **Client mTLS**: When you require Pucora to provide a certificate to connect to your services.
+
+In both cases, the certificates must be recognized by your system's Certification Authority (CA) or be added under the `ca_certs` list.
+
+## Service mTLS Configuration (End-user to gateway)
+From the configuration file perspective, Mutual TLS Authentication is no more than a flag `enable_mtls` under the `tls` section.
+
+When mTLS is enabled, **all Pucora endpoints** require clients to provide a known client-side X.509 authentication certificate. Pucora relies on the system's CA to validate certificates.
+
+To enable it you need a configuration like this:
+
+```json
+{
+  "version": 3,
+  "$schema": "https://www.pucora.io/schema/v2.0/pucora.json",
+  "tls": {
+    "enable_mtls": true,
+    "ca_certs": [
+      "rootCA.pem"
+    ],
+    "keys": [
+     {
+      "private_key": "/path/to/key.pem",
+      "public_key": "/path/to/cert.pem"
+     }
+    ]
+  }
+}
+```
+
+And these are the options you can include under `tls`:
+
+
+> **Schema reference:** `tls.json` — see [pucora-schema](https://github.com/pucora/pucora-schema).
+
+
+
+**Important**: Connections not having a recognized certificate in Pucora's system CA, will be rejected. For further documentation on TLS, see the [TLS documentation](/docs/service-settings/tls/)
+
+## Client mTLS Configuration (Gateway to service)
+If you want that **all connections to backends** use mTLS, add the following configuration:
+
+```json
+{
+    "version": 3,
+    "client_tls": {
+        "client_certs": [
+            {
+                "certificate": "cert.pem",
+                "private_key": "cert.key"
+            }
+        ]
+    }
+}
+```
+
+
+
+> **Schema reference:** `client_tls.json` — see [pucora-schema](https://github.com/pucora/pucora-schema).
+
+
+
+### Per-backend mTLS
+If instead of enabling mTLS against all backends, you can enable mTLS in a specific backend only. This option is available only in the 
+
+An example configuration would be:
+
+```json
+{
+  "endpoint": "/foo",
+  "backend": [
+    {
+      "host": ["https://api-needing-mtls"],
+      "url_pattern": "/foo",
+      "extra_config": {
+        "backend/http/client": {
+          "client_tls": {
+            "client_certs": [
+              {
+                "certificate": "cert.pem",
+                "private_key": "cert.key"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
+```
+Configuration needed ( only):
+
+
+
+> **Schema reference:** `client_tls.json` — see [pucora-schema](https://github.com/pucora/pucora-schema).
+
+
+
+This is the schema needed for client mTLS, but the HTTP Client settings have many other options not related to mTLS.
+
+## mTLS example
+To use mTLS you need to generate the client and server certificates. The following script example creates the needed files to enable mTLS. Notice that in the `CN` of the certificates we are adding `localhost` as we want to connect to Pucora from and to localhost.
+
+```sh
+# Private key for the certificate authority
+openssl genrsa -des3 -out rootCA.protected.key 2048
+openssl rsa -in rootCA.protected.key -out rootCA.key
+# Generate the CA
+openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 1024 -out rootCA.pem -subj "/C=US/ST=California/L=Mountain View/O=Your Organization/OU=Your Unit/CN=example.com"
+# Generate a key for the client certificate
+openssl genrsa -out client.key 2048
+# Generate the certificate request for the client
+openssl req -new -key client.key -out client.csr -subj "/C=US/ST=California/L=Mountain View/O=Your Organization/OU=Your Unit/CN=localhost"
+# Sign the certificate request for the client
+openssl x509 -req -in client.csr -extensions client -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out client.crt -days 500 -sha256
+
+# Generate a key for the server certificate
+openssl genrsa -out server.key 2048
+# Generate the certificate request for the server
+openssl req -new -key server.key -out server.csr -subj "/C=US/ST=California/L=Mountain View/O=Your Organization/OU=Your Unit/CN=localhost"
+# Sign the certificate request for the server
+openssl x509 -req -in server.csr -extensions server -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out server.crt -days 500 -sha256
+```
+
+The Pucora configuration needed is as follows (no endpoints used for this demo):
+
+```json
+{
+  "version": 3,
+  "$schema": "https://www.pucora.io/schema/v2.0/pucora.json",
+  "port": 443,
+  "tls": {
+    "enable_mtls": true,
+    "ca_certs": [
+      "rootCA.pem"
+    ],
+    "keys": [
+     {
+      "private_key": "./server.key",
+      "public_key": "./server.crt"
+     },
+    ],
+    "disable_system_ca_pool": true
+  }
+}
+```
+
+At this moment Pucora accepts only clients passing a valid certificate. Let's connect to the `/__health` endpoint:
+
+
+
+**Connect using mTLS**
+
+```bash
+curl \
+  --cacert rootCA.pem \
+  --key client.key \
+  --cert client.crt \
+  https://localhost/__health
+{"agents":{},"now":"2022-11-07 11:43:53.444657401 +0000 UTC m=+25.777003978","status":"ok"}
+```
+
+
+If we don't provide the valid certs we get an error instead:
+
+
+
+**Connect without valid certs**
+
+```bash
+curl -k https://localhost/__health
+curl: (56) OpenSSL SSL_read: error:14094412:SSL routines:ssl3_read_bytes:sslv3 alert bad certificate, errno 0
+```

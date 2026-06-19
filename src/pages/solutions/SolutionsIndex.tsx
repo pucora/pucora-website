@@ -20,7 +20,7 @@ export function SolutionsIndex() {
                 <Link to={`/solutions/${s.slug}`}>
                   <Card hover className="h-full">
                     <p className="text-sm font-medium text-accent">{s.subtitle}</p>
-                    <h3 className="mt-2 text-xl font-bold text-white">{s.title}</h3>
+                    <h3 className="mt-2 text-xl font-bold text-foreground">{s.title}</h3>
                     <p className="mt-3 text-sm text-muted">{s.problem}</p>
                   </Card>
                 </Link>

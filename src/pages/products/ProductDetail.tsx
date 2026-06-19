@@ -28,7 +28,7 @@ export function ProductDetail() {
           <Container>
             <Reveal>
               <Card className="mb-8">
-                <h3 className="mb-4 text-xl font-bold text-white">Quick start</h3>
+                <h3 className="mb-4 text-xl font-bold text-foreground">Quick start</h3>
                 <div className="space-y-3">
                   <CodeBlock code={`$ ${codeSnippets.configuratorInit}`} />
                   <CodeBlock code={`$ ${codeSnippets.configuratorPreset}`} />
@@ -37,7 +37,7 @@ export function ProductDetail() {
               </Card>
             </Reveal>
             <Reveal delay={0.1}>
-              <h3 className="mb-4 text-xl font-bold text-white">Available presets</h3>
+              <h3 className="mb-4 text-xl font-bold text-foreground">Available presets</h3>
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {configuratorPresets.map((preset) => (
                   <Card key={preset} className="!p-4">

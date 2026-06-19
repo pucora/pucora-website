@@ -1,0 +1,151 @@
+[Prometheus](https://prometheus.io/) is an open-source system monitoring and alerting toolkit that you can use to scrape a `/metrics` endpoint on Pucora in the selected port. For instance, you could have an endpoint like `http://localhost:9091/metrics`.
+
+When using Prometheus with OpenTelemetry, you can use a [ready-to-use Grafana dashboard](/docs/telemetry/grafana/) to visualize metrics, as shown in the image above.
+
+The mechanics are simple: you add the `telemetry/opentelemetry` integration with a `prometheus` exporter, and then you add a Prometheus job to scrape from your Pucora instances the metrics.
+
+![Prometheus scrapping from Pucora image](/images/documentation/diagrams/opentelemetry-prometheus.mmd.svg)
+
+## Prometheus Configuration
+To enable scrapeable Prometheus metrics on Pucora, add the [OpenTelemetry integration](/docs/telemetry/opentelemetry/) with a `prometheus` exporter. The following configuration is an example of how to do it:
+
+```json
+{
+    "version": 3,
+    "extra_config": {
+        "telemetry/opentelemetry": {
+            "service_name": "pucora_prometheus_service",
+            "metric_reporting_period": 1,
+            "exporters": {
+                "prometheus": [
+                    {
+                        "name": "local_prometheus",
+                        "port": 9090,
+                        "process_metrics": true,
+                        "go_metrics": true
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+The full list of the Prometheus exporter settings are as follows:
+
+
+
+> **Schema reference:** `telemetry/opentelemetry.json` — see [pucora-schema](https://github.com/pucora/pucora-schema).
+
+
+
+In addition, you can do a **granular configuration** of the metrics you want to expose using the `layers` attribute and other [OpenTelemetry options](/docs/telemetry/opentelemetry/#layers).
+
+### Demonstration setup
+The following configuration allows you to test a complete metrics experience, from generation and collection to visualization. The first code snippet is a `docker-compose.yaml` that declares three different services:
+
+- The `pucora` service exposing port 8080
+- The `prometheus` service that will scrape the metrics from Pucora
+- A `grafana` dashboard to display them (it uses our [Grafana dashboard](/docs/telemetry/grafana/))
+
+Notice that the three services declare volumes to pick the configuration.
+
+```yaml
+version: "3"
+services:
+  pucora:
+    image: "pucora/pucora-ce:latest:"
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./pucora:/etc/pucora/"
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - "./prometheus.yml:/etc/prometheus/prometheus.yml"
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: pucora
+      GF_SECURITY_ADMIN_PASSWORD: pucora
+      GF_AUT_ANONYMOUS_ENABLED: "true"
+    volumes:
+      - "./conf/provisioning/datasources:/etc/grafana/provisioning/datasources"
+      - "./conf/provisioning/dashboards:/etc/grafana/provisioning/dashboards"
+      - "./conf/data/dashboards:/var/lib/grafana/dashboards"
+```
+
+The following YAML configuration is a simple example of pulling data from the `/metrics` endpoint in Pucora integration from three different instances:
+
+> **Make sure ports are accessible**
+>
+> To let the scrapper access the metrics endpoint, make sure that the path and the port are the ones you configured, that the listen address allows you to access the data, and that if you use containers, the port is exposed in Pucora. Also, remember that you cannot use `localhost` as a target because the Prometheus container does not run inside the Pucora container; use the service name instead.
+
+```yaml
+global:
+  scrape_interval:     15s
+
+rule_files:
+  # - "first.rules"
+  # - "second.rules"
+
+scrape_configs:
+  - job_name: pucora_otel
+    scrape_interval: 5s
+    metrics_path: '/metrics'
+    static_configs:
+      - targets:
+        - 'pucora1:9091'
+        - 'pucora2:9091'
+        - 'pucora3:9091'
+        labels:
+          app: kotel_example
+```
+## Visualizing metrics in a dashboard
+When the Prometheus configuration is added into Pucora, and your Prometheus is scrapping it, you can visualize the data using our [Grafana dashboard](/docs/telemetry/grafana/) or make your own.
+
+> **Which layers do you need?**
+>
+> Our Grafana dashboard contains a lot of options, and **not all are enabled by default**. Because generating low-detail metrics is an expensive operation, some options in the `layers` are disabled by default. Enable the options that matter to you, knowing that the more detail you add, the more resources the gateway will need to run.
+
+![Screenshot of a grafana dashboard with Pucora metrics](/images/documentation/screenshots/grafana-prometheus-otel.png)
+
+## Migrating from an old OpenCensus configuration (legacy)
+Prior to Pucora v2.6, you had to configure the Prometheus endpoint using the opencensus component. The OpenTelemetry integration is much more powerful and delivers more data while simultaneously giving you more configuration options.
+
+If you had an OpenCensus configuration with a `prometheus` exporter like the following:
+```json
+{
+  "version": 3,
+  "extra_config": {
+    "telemetry/opencensus": {
+        "sample_rate": 100,
+        "reporting_period": 0,
+        "exporters": {
+          "prometheus": {
+              "port": 9091,
+              "namespace": "pucora",
+              "tag_host": false,
+              "tag_path": true,
+              "tag_method": true,
+              "tag_statuscode": false
+          }
+      }
+    }
+  }
+}
+```
+
+Then you should make the following changes to upgrade:
+
+- `telemetry/opencensus` -> Rename to `telemetry/opentelemetry`
+- `sample_rate` -> Delete this field
+- `reporting_period` -> Rename to `metric_reporting_period`
+- `prometheus: {...}` -> Add an array surrounding the object, so it becomes `prometheus: [{...}]`
+- `namespace` -> Rename to `name`
+- `tag_host`, `tag_path`,`tag_method`,`tag_statuscode` -> Delete them
+
+From here, add any of the additional properties you can add.

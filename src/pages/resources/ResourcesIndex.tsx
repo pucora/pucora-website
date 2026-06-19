@@ -6,7 +6,7 @@ import { Reveal } from '../../hooks/useScrollReveal'
 import { externalLinks } from '../../content/brand'
 
 const resourceLinks = [
-  { title: 'Documentation', description: 'Guides, reference, and configuration docs.', href: '/resources/documentation' },
+  { title: 'Documentation', description: 'Guides, reference, and configuration docs.', href: '/docs/overview' },
   { title: 'Community', description: 'GitHub, issues, and contributing.', href: '/resources/community' },
   { title: 'Get Started', description: 'Install and run Pucora in minutes.', href: '/get-started' },
   { title: 'Downloads', description: 'Docker images and release binaries.', href: '/downloads' },
@@ -27,7 +27,7 @@ export function ResourcesIndex() {
             {resourceLinks.map((r, i) => (
               <Reveal key={r.title} delay={i * 0.05}>
                 <Card className="flex h-full flex-col">
-                  <h3 className="font-semibold text-white">{r.title}</h3>
+                  <h3 className="font-semibold text-foreground">{r.title}</h3>
                   <p className="mt-2 flex-1 text-sm text-muted">{r.description}</p>
                   <Button
                     href={r.href}

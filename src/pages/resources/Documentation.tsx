@@ -3,39 +3,41 @@ import { Container } from '../../components/ui/Container'
 import { Card } from '../../components/ui/Card'
 import { Button } from '../../components/ui/Button'
 import { Reveal } from '../../hooks/useScrollReveal'
-import { externalLinks } from '../../content/brand'
+import { docsManifest } from '../../content/docs'
 
-const docSections = [
-  { title: 'Getting Started', description: 'Installation, configuration, and first endpoint.' },
-  { title: 'Non-REST Connectivity', description: 'WebSockets, gRPC, Pub/Sub, SOAP, GraphQL, Lambda.' },
-  { title: 'Security', description: 'JWT, OAuth2, CORS, rate limiting, circuit breakers.' },
-  { title: 'Observability', description: 'OpenTelemetry, Prometheus, Jaeger, logging.' },
-  { title: 'Configuration', description: 'JSON schema, flexible config, validation.' },
-  { title: 'Extending', description: 'Go plugins, Lua, Martian, CEL.' },
-]
+const featuredSlugs = ['overview/installing', 'deploying/helm', 'configuration/configurator', 'websockets']
 
 export function Documentation() {
+  const featured = featuredSlugs
+    .map((slug) => docsManifest.pages.find((p) => p.slug === slug))
+    .filter(Boolean)
+
   return (
     <MarketingPage
       title="Documentation"
       subtitle="Guides & Reference"
-      description="Comprehensive documentation for configuring, deploying, and operating Pucora Community Edition."
-      cta={{ label: 'Open docs.pucora.io', href: externalLinks.docs }}
+      description="Browse the full Pucora documentation — installation, configuration, backends, security, and more."
+      cta={{ label: 'Browse all docs', href: '/docs/overview' }}
     >
       <section className="py-16">
         <Container>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {docSections.map((s, i) => (
-              <Reveal key={s.title} delay={i * 0.05}>
-                <Card>
-                  <h3 className="font-semibold text-white">{s.title}</h3>
-                  <p className="mt-2 text-sm text-muted">{s.description}</p>
-                  <Button href={externalLinks.docs} external variant="ghost" className="mt-4 !px-0">
-                    Read docs →
+            {featured.map((page, i) => page && (
+              <Reveal key={page.slug} delay={i * 0.05}>
+                <Card hover className="h-full">
+                  <h3 className="font-semibold text-foreground">{page.title}</h3>
+                  <p className="mt-2 text-sm text-muted">{page.description || 'Read the guide'}</p>
+                  <Button href={`/docs/${page.slug}`} variant="ghost" className="mt-4 !px-0">
+                    Read guide →
                   </Button>
                 </Card>
               </Reveal>
             ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Button href="/docs/overview" size="lg">
+              Open documentation
+            </Button>
           </div>
         </Container>
       </section>

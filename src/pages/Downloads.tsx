@@ -42,7 +42,7 @@ export function Downloads() {
             {downloads.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.1}>
                 <Card className="flex h-full flex-col">
-                  <h3 className="text-lg font-bold text-white">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
                   <p className="mt-2 flex-1 text-sm text-muted">{item.description}</p>
                   <p className="mt-4 font-mono text-xs text-accent">{item.detail}</p>
                   {item.command && <CodeBlock code={`$ ${item.command}`} className="mt-4 text-xs" />}

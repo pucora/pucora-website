@@ -6,21 +6,26 @@ interface SectionHeadingProps {
   description?: string
   align?: 'left' | 'center'
   className?: string
+  dark?: boolean
 }
 
-export function SectionHeading({ eyebrow, title, description, align = 'center', className }: SectionHeadingProps) {
+export function SectionHeading({ eyebrow, title, description, align = 'center', className, dark }: SectionHeadingProps) {
   return (
     <div className={cn(align === 'center' && 'text-center', 'mb-12 md:mb-16', className)}>
       {eyebrow && (
-        <p className="mb-3 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-accent">
-          <span className="h-px w-8 bg-gradient-to-r from-transparent to-accent" />
+        <p className={cn('mb-3 text-sm font-medium uppercase tracking-widest', dark ? 'text-brand' : 'text-brand')}>
           {eyebrow}
-          {align === 'center' && <span className="h-px w-8 bg-gradient-to-l from-transparent to-accent" />}
         </p>
       )}
-      <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">{title}</h2>
+      <h2 className={cn('apple-headline', dark && 'text-inverse-foreground')}>{title}</h2>
       {description && (
-        <p className={cn('mt-4 text-lg leading-relaxed text-muted', align === 'center' && 'mx-auto max-w-3xl')}>
+        <p
+          className={cn(
+            'apple-subhead mt-4',
+            align === 'center' && 'mx-auto max-w-3xl',
+            dark ? 'text-inverse-foreground/70' : 'text-subtle',
+          )}
+        >
           {description}
         </p>
       )}

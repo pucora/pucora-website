@@ -37,7 +37,7 @@ export function Community() {
             {communityLinks.map((link, i) => (
               <Reveal key={link.title} delay={i * 0.1}>
                 <Card className="flex h-full flex-col">
-                  <h3 className="font-semibold text-white">{link.title}</h3>
+                  <h3 className="font-semibold text-foreground">{link.title}</h3>
                   <p className="mt-2 flex-1 text-sm text-muted">{link.description}</p>
                   <Button href={link.href} external variant="outline" className="mt-4">
                     Visit

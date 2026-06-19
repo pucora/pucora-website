@@ -7,9 +7,9 @@ interface BadgeProps {
 }
 
 const variants = {
-  default: 'bg-white/10 text-white',
-  accent: 'bg-accent/20 text-accent',
-  indigo: 'bg-indigo/20 text-indigo-300',
+  default: 'bg-surface text-subtle',
+  accent: 'bg-brand/10 text-brand',
+  indigo: 'bg-link/10 text-link',
 }
 
 export function Badge({ children, variant = 'default', className }: BadgeProps) {

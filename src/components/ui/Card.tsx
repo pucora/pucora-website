@@ -8,29 +8,25 @@ interface CardProps {
   glow?: boolean
 }
 
-export function Card({ children, className, hover = false, glow = false }: CardProps) {
+export function Card({ children, className, hover = false }: CardProps) {
   const Component = hover ? motion.div : 'div'
   const motionProps = hover
     ? {
-        whileHover: { y: -4, scale: 1.01 },
-        transition: { type: 'spring' as const, stiffness: 400, damping: 25 },
+        whileHover: { y: -2 },
+        transition: { type: 'spring' as const, stiffness: 400, damping: 30 },
       }
     : {}
 
   return (
     <Component
       className={cn(
-        'relative overflow-hidden glass-card rounded-2xl p-6',
-        hover && 'group cursor-pointer transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5',
-        glow && 'glow-accent',
+        'relative overflow-hidden rounded-2xl border border-border bg-background p-6 shadow-sm',
+        hover && 'cursor-pointer transition-shadow duration-300 hover:shadow-md',
         className,
       )}
       {...motionProps}
     >
-      {hover && (
-        <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/5 via-transparent to-indigo/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-      )}
-      <div className="relative">{children}</div>
+      {children}
     </Component>
   )
 }

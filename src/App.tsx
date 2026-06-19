@@ -13,6 +13,8 @@ import { FeatureDetail } from './pages/features/FeatureDetail'
 import { ResourcesIndex } from './pages/resources/ResourcesIndex'
 import { Documentation } from './pages/resources/Documentation'
 import { Community } from './pages/resources/Community'
+import { DocsLayout } from './components/docs/DocsLayout'
+import { DocPage, DocsIndex } from './components/docs/DocPage'
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
       { path: 'resources', element: <ResourcesIndex /> },
       { path: 'resources/documentation', element: <Documentation /> },
       { path: 'resources/community', element: <Community /> },
+      {
+        path: 'docs',
+        element: <DocsLayout />,
+        children: [
+          { index: true, element: <DocsIndex /> },
+          { path: '*', element: <DocPage /> },
+        ],
+      },
       { path: '*', element: <NotFound /> },
     ],
   },

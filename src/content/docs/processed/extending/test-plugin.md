@@ -1,0 +1,72 @@
+Plugins are essential extensions to the Pucora gateway, enhancing functionality without modifying the core codebase. Due to their reliance on specific versions of Pucora, libraries, or system architecture, plugins can face compatibility issues following updates or modifications. So, when you have written a new plugin, and compiled it you still need to see that is loadable into Pucora.
+
+> **Recompile plugins when you upgrade Pucora**
+>
+> When you upgrade Pucora to another version you must recompile your plugins using the [builder matching the version](/docs/extending/writing-plugins/#plugin-builder).
+
+Even if a plugin compiles and passes initial tests on its own, it might fail when loaded into Pucora. This could be due to various reasons such as compilation on a different architecture, mismatches in Go version, or discrepancies in library versions used by both the plugin and Pucora.
+
+The `test-plugin` command offers a real-scenario opportunity to test a compiled binary (usually a `.so` file) and verify if Pucora can successfully load it.
+
+## Testing a compiled plugin before it goes live
+The `test-plugin` command requires you to pass the type of plugin you would like to test, and the path to the compiled binary.
+
+The command accepts the following options:
+
+
+
+**Usage of test-plugin**
+
+```bash
+ -h
+
+
+Version: 
+
+Tests that one or more plugins are loadable into Pucora.
+
+Usage:
+   [flags] [artifacts]
+
+Examples:
+ -scm ./plugins/my_plugin.so ./plugins/my_other_plugin.so
+
+Flags:
+  -c, --client       The artifact should contain a Client Plugin.
+  -h, --help         help for test
+  -w, --middleware   The artifact should contain a Middleware Plugin.
+  -m, --modifier     The artifact should contain a Req/Resp Modifier Plugin.
+  -s, --server       The artifact should contain a Server Plugin.
+```
+
+
+You can pass as many arguments as plugins you want to check at once. For instance, if you want to test that `plugin1.so` and `plugin2.so` are loadable as server plugins, you could execute ` -s plugin1.so plugin2.so`.
+
+You should provide at least on of the flags `-c` (client plugins), `-m` (req/resp modifiers), or `-s` (server plugins).
+
+Here's an output example:
+
+
+
+**Checking a failing plugin example**
+
+```bash
+ -smc plugin1.so plugin2.so
+[KO] SERVER	    plugin1.so: The plugin does not contain a HandlerRegisterer.
+[KO] MODIFIER   plugin1.so: The plugin does not contain a ModifierRegisterer.
+[OK] CLIENT     plugin1.so
+[OK] CLIENT     plugin2.so
+[OK] SERVER     plugin2.so
+[OK] MODIFIER   plugin2.so
+[KO] 2 tested plugin(s) in 13.498341ms.
+1 plugin(s) failed.
+```
+
+
+The command will exit with a status code `1` when it fails, so if you integrate it in a CI/CD pipeline it will stop.
+
+When you find issues, use the `check-plugin` tool in development
+
+The command exits with a **code of `1`** upon failure, allowing for integration into CI/CD pipelines to halt progress.
+
+If you encounter issues, consider using the [check-plugin](/docs/extending/check-plugin/) tool during development to diagnose and resolve problems effectively.

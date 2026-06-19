@@ -40,34 +40,34 @@ export function FeatureDetail() {
               <button
                 type="button"
                 onClick={() => setFilter('all')}
-                className={`rounded-lg px-4 py-2 text-sm ${filter === 'all' ? 'bg-accent text-navy' : 'bg-white/10 text-white'}`}
+                className={`rounded-lg px-4 py-2 text-sm ${filter === 'all' ? 'bg-link text-background' : 'border border-border bg-surface text-foreground'}`}
               >
                 All ({connectivityFeatures.length})
               </button>
               <button
                 type="button"
                 onClick={() => setFilter('ce')}
-                className={`rounded-lg px-4 py-2 text-sm ${filter === 'ce' ? 'bg-accent text-navy' : 'bg-white/10 text-white'}`}
+                className={`rounded-lg px-4 py-2 text-sm ${filter === 'ce' ? 'bg-link text-background' : 'border border-border bg-surface text-foreground'}`}
               >
                 In CE ({connectivityFeatures.filter((f) => f.inCE).length})
               </button>
             </div>
-            <div className="overflow-x-auto rounded-xl border border-white/10">
+            <div className="overflow-x-auto rounded-xl border border-border">
               <table className="w-full text-left text-sm">
-                <thead className="border-b border-white/10 bg-navy-card">
+                <thead className="border-b border-border bg-surface">
                   <tr>
-                    <th className="px-4 py-3 font-semibold text-white">#</th>
-                    <th className="px-4 py-3 font-semibold text-white">Feature</th>
-                    <th className="px-4 py-3 font-semibold text-white">Namespace</th>
-                    <th className="px-4 py-3 font-semibold text-white">Description</th>
-                    <th className="px-4 py-3 font-semibold text-white">Edition</th>
+                    <th className="px-4 py-3 font-semibold text-foreground">#</th>
+                    <th className="px-4 py-3 font-semibold text-foreground">Feature</th>
+                    <th className="px-4 py-3 font-semibold text-foreground">Namespace</th>
+                    <th className="px-4 py-3 font-semibold text-foreground">Description</th>
+                    <th className="px-4 py-3 font-semibold text-foreground">Edition</th>
                   </tr>
                 </thead>
                 <tbody>
                   {filtered.map((f) => (
-                    <tr key={f.id} className="border-b border-white/5 hover:bg-white/5">
+                    <tr key={f.id} className="border-b border-border hover:bg-surface">
                       <td className="px-4 py-3 text-muted">{f.id}</td>
-                      <td className="px-4 py-3 font-medium text-white">{f.name}</td>
+                      <td className="px-4 py-3 font-medium text-foreground">{f.name}</td>
                       <td className="px-4 py-3 font-mono text-xs text-accent">{f.namespace}</td>
                       <td className="px-4 py-3 text-muted">{f.description}</td>
                       <td className="px-4 py-3">

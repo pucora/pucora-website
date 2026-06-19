@@ -1,0 +1,2363 @@
+{
+  "pages": [
+    {
+      "slug": "home",
+      "file": "_home.md",
+      "title": "Pucora API Gateway Documentation",
+      "description": "Access the documentation for Pucora API Gateway, including guides, tutorials, and reference materials for its implementation",
+      "weight": 100,
+      "section": "home"
+    },
+    {
+      "slug": "async",
+      "file": "async.md",
+      "title": "Event-Driven Async Agents",
+      "description": "Learn how to leverage asynchronous processing in Pucora API Gateway to implement an event based pattern",
+      "weight": 500,
+      "section": "async"
+    },
+    {
+      "slug": "async/amqp",
+      "file": "async/amqp.md",
+      "title": "AMQP driver for Async Agent",
+      "description": "Leverage Asynchronous AMQP Agents in Pucora for high-performance messaging and event-driven architectures",
+      "weight": 510,
+      "section": "async"
+    },
+    {
+      "slug": "async/kafka",
+      "file": "async/kafka.md",
+      "title": "Kafka Async Driver",
+      "description": "Background Kafka consumer agents that forward events to internal webhooks",
+      "weight": 520,
+      "section": "async"
+    },
+    {
+      "slug": "authorization",
+      "file": "authorization.md",
+      "title": "Intro to AuthZ and AuthN",
+      "description": "Overview of the options available to integrate authentication and authorization services with Pucora API Gateway for secure access control to your APIs",
+      "weight": -100,
+      "section": "authorization"
+    },
+    {
+      "slug": "authorization/auth0",
+      "file": "authorization/auth0.md",
+      "title": "Auth0 integration",
+      "description": "Integrate Auth0 authentication and authorization services with Pucora API Gateway for secure and seamless access control to your APIs",
+      "weight": 100,
+      "section": "authorization"
+    },
+    {
+      "slug": "authorization/client-credentials",
+      "file": "authorization/client-credentials.md",
+      "title": "OAuth2 Client credentials",
+      "description": "Learn how to implement OAuth 2.0 Client Credentials (2-legged flow) with Pucora API Gateway to secure your APIs for machine-to-machine communication",
+      "weight": 50,
+      "section": "authorization"
+    },
+    {
+      "slug": "authorization/descope",
+      "file": "authorization/descope.md",
+      "title": "Descope integration",
+      "description": "Learn how to integrate Descope authorization with Pucora API Gateway for secure and controlled access to your APIs.",
+      "weight": 110,
+      "section": "authorization"
+    },
+    {
+      "slug": "authorization/jwk-caching",
+      "file": "authorization/jwk-caching.md",
+      "title": "JWK key caching",
+      "description": "Implement shared JWK caching for efficient authorization in Pucora. Learn how to cache and manage JSON Web Key (JWK) sets to optimize authorization's performance.",
+      "weight": 21,
+      "section": "authorization"
+    },
+    {
+      "slug": "authorization/jwt-overview",
+      "file": "authorization/jwt-overview.md",
+      "title": "JWT overview",
+      "description": "Gain an overview of JSON Web Tokens (JWT) and learn how to implement JWT-based authorization with Pucora API Gateway for secure API access",
+      "weight": 10,
+      "section": "authorization"
+    },
+    {
+      "slug": "authorization/jwt-signing",
+      "file": "authorization/jwt-signing.md",
+      "title": "JWT Signing",
+      "description": "Pucora's JWT signing wraps your login endpoint, signing payloads with your secret key. Perfect for monolith migrations or setups without an OAuth server.",
+      "weight": 30,
+      "section": "authorization"
+    },
+    {
+      "slug": "authorization/jwt-validation",
+      "file": "authorization/jwt-validation.md",
+      "title": "JWT Validation",
+      "description": "Implement JWT validation with Pucora API Gateway to secure your APIs and prevent unauthorized access.",
+      "weight": 20,
+      "section": "authorization"
+    },
+    {
+      "slug": "authorization/keycloak",
+      "file": "authorization/keycloak.md",
+      "title": "Keycloak integration",
+      "description": "Learn how to integrate Keycloak authorization with Pucora API Gateway for secure and controlled access to your APIs.",
+      "weight": 110,
+      "section": "authorization"
+    },
+    {
+      "slug": "authorization/mutual-authentication",
+      "file": "authorization/mutual-authentication.md",
+      "title": "Mutual TLS Authentication (mTLS)",
+      "description": "Implement mutual authentication in Pucora API Gateway to establish a secure and trusted communication channel between clients and APIs",
+      "weight": 50,
+      "section": "authorization"
+    },
+    {
+      "slug": "authorization/revoking-tokens",
+      "file": "authorization/revoking-tokens.md",
+      "title": "Revoking tokens",
+      "description": "Learn how to implement token revocation mechanisms in Pucora API Gateway to manage and invalidate access tokens when needed",
+      "weight": 40,
+      "section": "authorization"
+    },
+    {
+      "slug": "backends",
+      "file": "backends.md",
+      "title": "The backend object",
+      "description": "Explore the backend configuration options in Pucora API Gateway, allowing you to connect and integrate with your microservices efficiently",
+      "weight": 20,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/amqp-consumer",
+      "file": "backends/amqp-consumer.md",
+      "title": "RabbitMQ Consumer",
+      "description": "Integrate AMQP consumers into Pucora API Gateway for seamless communication with message queue systems like RabbitMQ",
+      "weight": 100,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/amqp-producer",
+      "file": "backends/amqp-producer.md",
+      "title": "RabbitMQ Producer",
+      "description": "Integrate AMQP producers with Pucora for seamless communication with backend systems. Follow our documentation to set up reliable and scalable messaging with Advanced Message Queuing Protocol (AMQP).",
+      "weight": 110,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/caching",
+      "file": "backends/caching.md",
+      "title": "Response caching",
+      "description": "Learn how to implement effective caching strategies in Pucora API Gateway to improve API performance and reduce backend load",
+      "weight": 100,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/circuit-breaker",
+      "file": "backends/circuit-breaker.md",
+      "title": "Circuit Breaker",
+      "description": "Implement the circuit breaker pattern in Pucora API Gateway to enhance the resilience and stability of your API ecosystem",
+      "weight": 930,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/data-manipulation",
+      "file": "backends/data-manipulation.md",
+      "title": "Basic data manipulation: Group, Filter, Map",
+      "description": "Explore data manipulation capabilities in Pucora API Gateway, enabling transformation and manipulation of response data",
+      "weight": 20,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/detailed-errors",
+      "file": "backends/detailed-errors.md",
+      "title": "Strategies to return headers and errors",
+      "description": "Implement returning of backend headers and errors to provide informative and customized error messages to API consumers",
+      "weight": 430,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/flatmap",
+      "file": "backends/flatmap.md",
+      "title": "Response manipulation on arrays",
+      "description": "Integrate the FlatMap backend into Pucora API Gateway for array data transformation and mapping operations in your API ecosystem",
+      "weight": 110,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/graphql",
+      "file": "backends/graphql.md",
+      "title": "GraphQL",
+      "description": "Integrate GraphQL backends into Pucora API Gateway to leverage the power of GraphQL in your microservices architecture",
+      "weight": 140,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/grpc",
+      "file": "backends/grpc.md",
+      "title": "gRPC client",
+      "description": "Call upstream gRPC services from REST endpoints using a protobuf catalog",
+      "weight": 215,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/http-client",
+      "file": "backends/http-client.md",
+      "title": "HTTP Per-backend Client settings",
+      "description": "The HTTP client options allow you to configure the behavior to connect to your backends using HTTP",
+      "weight": 145,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/lambda",
+      "file": "backends/lambda.md",
+      "title": "Lambda functions",
+      "description": "Integrate AWS Lambda functions into Pucora API Gateway to leverage serverless computing for scalable and event-driven API processing",
+      "weight": 150,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/martian",
+      "file": "backends/martian.md",
+      "title": "Requests and response static manipulation",
+      "description": "Learn how to integrate the Martian component into Pucora API Gateway, enabling static request and response transformations for your APIs",
+      "weight": 300,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/pubsub/kafka",
+      "file": "backends/pubsub/kafka.md",
+      "title": "Kafka Advanced PubSub",
+      "description": "Kafka publisher and subscriber with mTLS, SASL, Azure Event Hub, and idempotent producers",
+      "weight": 135,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/pubsub",
+      "file": "backends/pubsub.md",
+      "title": "Publisher/subscribe (Kafka,NATS and cloud)",
+      "description": "Integrate Pub-Sub backend into Pucora API Gateway to enable event-driven communication and real-time data updates in your API ecosystem",
+      "weight": 130,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/rate-limit",
+      "file": "backends/rate-limit.md",
+      "title": "Proxy rate limit",
+      "description": "Implement rate limiting in Pucora API Gateway backends to control and manage API usage, preventing abuse and ensuring fair resource allocation",
+      "weight": 960,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/service-discovery",
+      "file": "backends/service-discovery.md",
+      "title": "Service Discovery",
+      "description": "Integrate service discovery mechanisms into Pucora API Gateway to dynamically discover and route requests to available backend services",
+      "weight": 160,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/shadow-backends",
+      "file": "backends/shadow-backends.md",
+      "title": "Traffic shadowing/mirroring",
+      "description": "Implement shadow backends in Pucora API Gateway for non-intrusive testing and monitoring of new backend services or API versions",
+      "weight": 170,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/soap",
+      "file": "backends/soap.md",
+      "title": "SOAP",
+      "description": "Connect legacy SOAP/XML services to modern REST clients with templates, WSDL, and WS-Security",
+      "weight": 230,
+      "section": "backends"
+    },
+    {
+      "slug": "backends/supported-encodings",
+      "file": "backends/supported-encodings.md",
+      "title": "Origin response formats",
+      "description": "Explore the supported encodings for seamless integration with backend systems in Pucora. Learn how to optimize data exchange and ensure compatibility between Pucora and your backend services.",
+      "weight": 400,
+      "section": "backends"
+    },
+    {
+      "slug": "benchmarks",
+      "file": "benchmarks.md",
+      "title": "Benchmarks Overview",
+      "description": "Explore the performance benchmarks conducted with Pucora API Gateway to ensure optimal performance and scalability for your APIs.",
+      "weight": 1,
+      "section": "benchmarks"
+    },
+    {
+      "slug": "benchmarks/api-gateway-benchmark",
+      "file": "benchmarks/api-gateway-benchmark.md",
+      "title": "Pucora vs others",
+      "description": "Explore the API gateway benchmarking capabilities of Pucora, measure performance, and optimize your API gateway for high throughput and low latency",
+      "weight": 10,
+      "section": "benchmarks"
+    },
+    {
+      "slug": "benchmarks/aws",
+      "file": "benchmarks/aws.md",
+      "title": "On Amazon Web Services",
+      "description": "Explore the benchmarking results of Pucora API Gateway running on Amazon Web Services (AWS), showcasing its performance and scalability",
+      "weight": 10,
+      "section": "benchmarks"
+    },
+    {
+      "slug": "benchmarks/local",
+      "file": "benchmarks/local.md",
+      "title": "Local machine",
+      "description": "Performance tests of Pucora running on a local machine (laptop) with measurements of different concurrency levels.",
+      "weight": 15,
+      "section": "benchmarks"
+    },
+    {
+      "slug": "configuration",
+      "file": "configuration.md",
+      "title": "Configuration overview",
+      "description": "Get a comprehensive guide on configuring Pucora API Gateway to optimize and streamline your API management processes",
+      "weight": -1000,
+      "section": "configuration"
+    },
+    {
+      "slug": "configuration/audit",
+      "file": "configuration/audit.md",
+      "title": "Configuration audit",
+      "description": "Learn how to configure configuration auditing in Pucora API Gateway to ensure file integrity and print security recommendations and statistical information",
+      "weight": 21,
+      "section": "configuration"
+    },
+    {
+      "slug": "configuration/check",
+      "file": "configuration/check.md",
+      "title": "Configuration check",
+      "description": "The pucora check command validates Pucora configuration files written in any of its supported formats and outputs syntax or linting problems.",
+      "weight": 20,
+      "section": "configuration"
+    },
+    {
+      "slug": "configuration/configurator",
+      "file": "configuration/configurator.md",
+      "title": "Pucora Configurator",
+      "description": "Generate pucora.json from YAML profiles and built-in presets for REST, gRPC, WebSockets, pub/sub, and more",
+      "weight": -900,
+      "section": "configuration"
+    },
+    {
+      "slug": "configuration/designer",
+      "file": "configuration/designer.md",
+      "title": "Designer: Graphical Interface",
+      "description": "Discover the API Configuration Designer in Pucora API Gateway, enabling intuitive and visual configuration management for your APIs",
+      "weight": 40,
+      "section": "configuration"
+    },
+    {
+      "slug": "configuration/environment-vars",
+      "file": "configuration/environment-vars.md",
+      "title": "Environment vars",
+      "description": "Learn how to leverage environment variables in Pucora API Gateway configuration for flexible and dynamic configuration management",
+      "weight": 40,
+      "section": "configuration"
+    },
+    {
+      "slug": "configuration/flexible-config",
+      "file": "configuration/flexible-config.md",
+      "title": "Flexible Configuration",
+      "description": "Discover the flexible configuration options offered by Pucora API Gateway, allowing you to customize and fine-tune your API gateway setup",
+      "weight": 30,
+      "section": "configuration"
+    },
+    {
+      "slug": "configuration/migrating",
+      "file": "configuration/migrating.md",
+      "title": "Upgrading the configuration",
+      "description": "Seamlessly migrate your Pucora configuration to a new version. Hassle-free transition for your API Gateway",
+      "weight": 1000,
+      "section": "configuration"
+    },
+    {
+      "slug": "configuration/structure",
+      "file": "configuration/structure.md",
+      "title": "The configuration file",
+      "description": "Learn about the configuration structure and organization in Pucora API Gateway to effectively define the behavior of your API gateway",
+      "weight": 10,
+      "section": "configuration"
+    },
+    {
+      "slug": "configuration/supported-formats",
+      "file": "configuration/supported-formats.md",
+      "title": "Supported file formats",
+      "description": "Explore the supported formats for Pucora configuration. Find the best fit for your API Gateway setup",
+      "weight": 35,
+      "section": "configuration"
+    },
+    {
+      "slug": "configuration/templates",
+      "file": "configuration/templates.md",
+      "title": "Configuration with templates",
+      "description": "Understanding how to work with Go templates in the flexible configuration and other components. Template syntax and practical snippets to resolve common situations.",
+      "weight": 31,
+      "section": "configuration"
+    },
+    {
+      "slug": "configuration/working-directory",
+      "file": "configuration/working-directory.md",
+      "title": "Working Directory",
+      "description": "Pucora supports absolute and relative paths in configurations. Absolute paths provide clarity, while relative paths use the working directory, making them flexible for varied environments.",
+      "weight": 100,
+      "section": "configuration"
+    },
+    {
+      "slug": "deploying",
+      "file": "deploying.md",
+      "title": "Best practices",
+      "description": "Explore the best practices and guidelines for deploying Pucora API Gateway in various environments, ensuring a smooth and efficient deployment process",
+      "weight": 1,
+      "section": "deploying"
+    },
+    {
+      "slug": "deploying/ci-cd",
+      "file": "deploying/ci-cd.md",
+      "title": "CI/CD integration",
+      "description": "Streamline your API deployments with Pucora using continuous integration and continuous deployment (CI/CD) practices. Follow our comprehensive guide to automate your deployment pipeline.",
+      "weight": 20,
+      "section": "deploying"
+    },
+    {
+      "slug": "deploying/clustering",
+      "file": "deploying/clustering.md",
+      "title": "Running in a cluster",
+      "description": "Discover the best practices for deploying Pucora in a clustered environment. Scale your API infrastructure effectively using our comprehensive clustering deployment guide.",
+      "weight": 1,
+      "section": "deploying"
+    },
+    {
+      "slug": "deploying/docker",
+      "file": "deploying/docker.md",
+      "title": "Docker artifact",
+      "description": "Learn how to deploy Pucora API Gateway using Docker, enabling containerized deployments for efficient scaling and management",
+      "weight": 20,
+      "section": "deploying"
+    },
+    {
+      "slug": "deploying/helm",
+      "file": "deploying/helm.md",
+      "title": "Helm Chart",
+      "description": "Install, configure, upgrade, and test the official Pucora Helm chart on Kubernetes — ConfigMap, Secret, and immutable image modes.",
+      "weight": 35,
+      "section": "deploying"
+    },
+    {
+      "slug": "deploying/kubernetes",
+      "file": "deploying/kubernetes.md",
+      "title": "To Kubernetes",
+      "description": "Discover the best practices and guidelines for deploying Pucora API Gateway on Kubernetes, enabling scalable and efficient API management",
+      "weight": 30,
+      "section": "deploying"
+    },
+    {
+      "slug": "deploying/server-dimensioning",
+      "file": "deploying/server-dimensioning.md",
+      "title": "Server requirements",
+      "description": "Learn how to dimension and scale servers for deploying Pucora API Gateway, ensuring optimal performance and resource allocation",
+      "weight": 10,
+      "section": "deploying"
+    },
+    {
+      "slug": "design",
+      "file": "design.md",
+      "title": "The big picture",
+      "description": "Discover the Pucora API architecture and its design principles, as well its most important internal packages.",
+      "weight": -1,
+      "section": "design"
+    },
+    {
+      "slug": "design/backend-for-frontend",
+      "file": "design/backend-for-frontend.md",
+      "title": "Backend For Frontend",
+      "description": "Discover how to leverage the Backend-for-Frontend (BFF) design pattern with Pucora API Gateway to optimize frontend-backend communication",
+      "weight": 10,
+      "section": "design"
+    },
+    {
+      "slug": "design/execution-flow",
+      "file": "design/execution-flow.md",
+      "title": "The execution flow",
+      "description": "Understand the execution flow design of Pucora API Gateway. Is the configuration X executed before the configuration Y?",
+      "weight": 100,
+      "section": "design"
+    },
+    {
+      "slug": "design/zero-trust",
+      "file": "design/zero-trust.md",
+      "title": "Zero-trust security",
+      "description": "The zero-trust security is a deny by default software design choice, where the exposed surface is limited to what it's explicitly declared.",
+      "weight": 10,
+      "section": "design"
+    },
+    {
+      "slug": "developer/IDE-integration",
+      "file": "developer/IDE-integration.md",
+      "title": "IDE integration",
+      "description": "Enhance your development workflow by integrating Pucora with your favorite IDE. Follow our comprehensive guide to seamlessly integrate Pucora into your development environment.",
+      "weight": 300,
+      "section": "developer"
+    },
+    {
+      "slug": "developer",
+      "file": "developer.md",
+      "title": "Developer Tools",
+      "description": "Discover what are the development tools you can compile additionally to work with Pucora Open Source edition. These tools are not bundled by default with Pucora.",
+      "weight": 10,
+      "section": "developer"
+    },
+    {
+      "slug": "developer/hot-reload",
+      "file": "developer/hot-reload.md",
+      "title": "Watch and hot reload",
+      "description": "Explore the hot reload feature in Pucora API Gateway, allowing dynamic configuration updates without service interruption for enhanced agility on development",
+      "weight": 80,
+      "section": "developer"
+    },
+    {
+      "slug": "developer/integration-tests",
+      "file": "developer/integration-tests.md",
+      "title": "Run integration tests",
+      "description": "",
+      "weight": 30,
+      "section": "developer"
+    },
+    {
+      "slug": "endpoints",
+      "file": "endpoints.md",
+      "title": "The endpoint object",
+      "description": "Configure and manage API endpoints with Pucora. Learn how to define routes, backends, and middleware for your API gateway.",
+      "weight": 10,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/common-expression-language-cel",
+      "file": "endpoints/common-expression-language-cel.md",
+      "title": "Conditional requests and responses",
+      "description": "Learn how to utilize the Common Expression Language (CEL) in Pucora API Gateway for dynamic routing and advanced request handling",
+      "weight": 180,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/concurrent-requests",
+      "file": "endpoints/concurrent-requests.md",
+      "title": "Concurrent Requests",
+      "description": "Learn how Pucora API Gateway efficiently handles concurrent requests to ensure scalability, performance, and optimal resource utilization",
+      "weight": 150,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/content-types",
+      "file": "endpoints/content-types.md",
+      "title": "Returned response formats",
+      "description": "Discover how Pucora API Gateway handles various content types, ensuring proper parsing and transformation for seamless data exchange",
+      "weight": 410,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/debug-endpoint",
+      "file": "endpoints/debug-endpoint.md",
+      "title": "Debug endpoint",
+      "description": "Learn how to utilize the debug endpoint in Pucora API Gateway for troubleshooting and debugging purposes during API development and testing",
+      "weight": 20,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/echo-endpoint",
+      "file": "endpoints/echo-endpoint.md",
+      "title": "Echo endpoint",
+      "description": "Learn how to configure the Echo endpoint in Pucora. A straightforward way to test your API Gateway setup containing the details of a request.",
+      "weight": 30,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/json-schema",
+      "file": "endpoints/json-schema.md",
+      "title": "JSON Schema request validation",
+      "description": "Implement JSON Schema validation in Pucora API Gateway to ensure data integrity and adherence to defined data structures for API requests",
+      "weight": 450,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/lua",
+      "file": "endpoints/lua.md",
+      "title": "Lua scripts",
+      "description": "Explore the power of Lua scripting in Pucora API Gateway, allowing you to customize and extend the behavior of your API gateway",
+      "weight": 200,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/no-op",
+      "file": "endpoints/no-op.md",
+      "title": "No-op (proxy only)",
+      "description": "",
+      "weight": 40,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/parameter-forwarding",
+      "file": "endpoints/parameter-forwarding.md",
+      "title": "Forwarding query strings and headers",
+      "description": "Learn how to forward and manipulate parameters effectively using Pucora API Gateway, ensuring seamless communication between clients and microservices",
+      "weight": 30,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/rate-limit",
+      "file": "endpoints/rate-limit.md",
+      "title": "Endpoint Rate Limit",
+      "description": "Implement rate-limiting strategies in Pucora API Gateway to control the number of requests and prevent API abuse or overloading",
+      "weight": 950,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/response-manipulation",
+      "file": "endpoints/response-manipulation.md",
+      "title": "API Composition and aggregation",
+      "description": "Explore the response manipulation capabilities in Pucora API Gateway, allowing you to modify and enhance API responses for a better user experience",
+      "weight": 10,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/sequential-proxy",
+      "file": "endpoints/sequential-proxy.md",
+      "title": "Sequential Proxy (chain reqs.)",
+      "description": "Explore the sequential proxying capability in Pucora API Gateway, allowing you to chain multiple requests and orchestrate complex API workflows",
+      "weight": 80,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/static-proxy",
+      "file": "endpoints/static-proxy.md",
+      "title": "Static responses on failures (stubs)",
+      "description": "Learn how to configure static proxy endpoints in Pucora API Gateway to return stubs and static data on certain events",
+      "weight": 440,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/status-codes",
+      "file": "endpoints/status-codes.md",
+      "title": "Status Codes",
+      "description": "Learn how to interpret HTTP status codes in Pucora API Gateway, ensuring accurate and meaningful responses to API consumers",
+      "weight": 420,
+      "section": "endpoints"
+    },
+    {
+      "slug": "endpoints/streaming",
+      "file": "endpoints/streaming.md",
+      "title": "HTTP Streaming and SSE",
+      "description": "Transparent long-lived HTTP streams and SSE using the no-op proxy encoding",
+      "weight": 150,
+      "section": "endpoints"
+    },
+    {
+      "slug": "extending",
+      "file": "extending.md",
+      "title": "How to extend Pucora?",
+      "description": "Learn how to extend Pucora API Gateway by developing custom plugins or scripts to add new functionalities and integrate with external systems",
+      "weight": -1,
+      "section": "extending"
+    },
+    {
+      "slug": "extending/check-plugin",
+      "file": "extending/check-plugin.md",
+      "title": "Check plugin dependencies",
+      "description": "Learn how to check your custom Pucora plugins with the check-plugin command and ensure that your developments are compatible and loadable by Pucora during runtime.",
+      "weight": 30,
+      "section": "extending"
+    },
+    {
+      "slug": "extending/http-client-plugins",
+      "file": "extending/http-client-plugins.md",
+      "title": "HTTP client plugins",
+      "description": "Learn how to extend the functionality of Pucora API Gateway by utilizing HTTP client plugins, enabling customized communication with external services",
+      "weight": 110,
+      "section": "extending"
+    },
+    {
+      "slug": "extending/http-server-plugins",
+      "file": "extending/http-server-plugins.md",
+      "title": "HTTP server plugins",
+      "description": "Discover how to write HTTP server plugins for Pucora API Gateway, enabling you to customize server behaviors and implement custom logic.",
+      "weight": 100,
+      "section": "extending"
+    },
+    {
+      "slug": "extending/injecting-plugins",
+      "file": "extending/injecting-plugins.md",
+      "title": "Injecting plugins",
+      "description": "Discover the extensibility of Pucora API Gateway by learning how to inject custom plugins for adding new functionality and integration",
+      "weight": 40,
+      "section": "extending"
+    },
+    {
+      "slug": "extending/plugin-modifiers",
+      "file": "extending/plugin-modifiers.md",
+      "title": "Req/resp modifier plugins",
+      "description": "Learn how to extend the functionality of Pucora API Gateway by utilizing plugin modifiers, enabling customized request and response processing",
+      "weight": 120,
+      "section": "extending"
+    },
+    {
+      "slug": "extending/test-plugin",
+      "file": "extending/test-plugin.md",
+      "title": "Testing your plugins",
+      "description": "Learn how to test binary files that you compiled as plugins by loading them to Pucora and test their behavior before you deploy them to production.",
+      "weight": 30,
+      "section": "extending"
+    },
+    {
+      "slug": "extending/writing-plugins",
+      "file": "extending/writing-plugins.md",
+      "title": "Writing plugins",
+      "description": "Learn how to extend the functionality of Pucora API Gateway by writing and building custom plugins, enabling custom business logic and workflows",
+      "weight": 10,
+      "section": "extending"
+    },
+    {
+      "slug": "faq",
+      "file": "faq.md",
+      "title": "Pucora F.A.Q",
+      "description": "Get quick answers to frequently asked questions about how Pucora works and the reason behind different responses.",
+      "weight": -1,
+      "section": "faq"
+    },
+    {
+      "slug": "faq/switch-versions",
+      "file": "faq/switch-versions.md",
+      "title": "Version upgrades",
+      "description": "Guidelines for upgrading Pucora Community Edition and validating configuration across versions.",
+      "weight": 20,
+      "section": "faq"
+    },
+    {
+      "slug": "grpc",
+      "file": "grpc.md",
+      "title": "Introduction to gRPC",
+      "description": "gRPC catalog setup, client backends, and server exposure on the Pucora gateway port",
+      "weight": 210,
+      "section": "grpc"
+    },
+    {
+      "slug": "grpc/server",
+      "file": "grpc/server.md",
+      "title": "gRPC Server",
+      "description": "Expose gRPC services on the same port as the Pucora HTTP gateway",
+      "weight": 220,
+      "section": "grpc"
+    },
+    {
+      "slug": "logging",
+      "file": "logging.md",
+      "title": "Logging overview",
+      "description": "Learn how to implement Syslog and Stdout logging in Pucora API Gateway, enabling effective monitoring and troubleshooting of your API gateway and microservices",
+      "weight": 300,
+      "section": "logging"
+    },
+    {
+      "slug": "logging/elk-integration",
+      "file": "logging/elk-integration.md",
+      "title": "Logging Dashboard (ELK)",
+      "description": "Learn how to integrate the ELK (Elasticsearch, Logstash, Kibana) stack for centralized logging and log analysis in Pucora API Gateway",
+      "weight": 390,
+      "section": "logging"
+    },
+    {
+      "slug": "logging/graylog-gelf",
+      "file": "logging/graylog-gelf.md",
+      "title": "Logging to Graylog - GELF",
+      "description": "Integrate Graylog GELF logging with Pucora API Gateway for centralized log management and analysis of API logs",
+      "weight": 320,
+      "section": "logging"
+    },
+    {
+      "slug": "logging/logstash",
+      "file": "logging/logstash.md",
+      "title": "Logging in JSON (Logstash)",
+      "description": "Streamline log management and analysis by integrating Logstash with Pucora. Follow our documentation to set up seamless integration and gain valuable insights from your API logs.",
+      "weight": 360,
+      "section": "logging"
+    },
+    {
+      "slug": "non-rest-connectivity",
+      "file": "non-rest-connectivity.md",
+      "title": "Introduction to Non-REST Connectivity",
+      "description": "Explore Pucora's non-REST connectivity features, including RabbitMQ integration, GraphQL, Lambda functions, event-driven async agents, and AMQP support.",
+      "weight": -10,
+      "section": "non-rest-connectivity"
+    },
+    {
+      "slug": "overview",
+      "file": "overview.md",
+      "title": "Introduction",
+      "description": "Explore the comprehensive documentation for Pucora API Gateway, including an overview, guides, and best practices",
+      "weight": -10000,
+      "section": "overview"
+    },
+    {
+      "slug": "overview/guides",
+      "file": "overview/guides.md",
+      "title": "Tutorials and Guides",
+      "description": "Access a collection of comprehensive guides for Pucora API Gateway, providing step-by-step instructions and best practices for various use cases",
+      "weight": 1000,
+      "section": "overview"
+    },
+    {
+      "slug": "overview/installing",
+      "file": "overview/installing.md",
+      "title": "Installation",
+      "description": "Follow our step-by-step installation guide to set up and configure Pucora API Gateway, enabling efficient and scalable API management.",
+      "weight": 10,
+      "section": "overview"
+    },
+    {
+      "slug": "overview/lura-vs-pucora",
+      "file": "overview/lura-vs-pucora.md",
+      "title": "Lura vs. Pucora",
+      "description": "The Lura Project is the API gateway engine; Pucora CE is the ready-to-use distribution built on top of it.",
+      "weight": 100,
+      "section": "overview"
+    },
+    {
+      "slug": "overview/playground",
+      "file": "overview/playground.md",
+      "title": "Playground",
+      "description": "Explore Pucora Playground and experiment with different API configurations before deploying them",
+      "weight": 50,
+      "section": "overview"
+    },
+    {
+      "slug": "overview/run",
+      "file": "overview/run.md",
+      "title": "Running Pucora",
+      "description": "All options of the pucora command to manage the service, write plugins, or get information about the installed version.",
+      "weight": 20,
+      "section": "overview"
+    },
+    {
+      "slug": "overview/verifying-packages",
+      "file": "overview/verifying-packages.md",
+      "title": "Verifying packages (PGP and SHA256)",
+      "description": "",
+      "weight": 100,
+      "section": "overview"
+    },
+    {
+      "slug": "request-response-manipulation",
+      "file": "request-response-manipulation.md",
+      "title": "Manipulation toolkit",
+      "description": "Explore the request and response manipulation capabilities in Pucora API Gateway, allowing you to modify and enhance API responses for a better user experience",
+      "weight": -1,
+      "section": "request-response-manipulation"
+    },
+    {
+      "slug": "security",
+      "file": "security.md",
+      "title": "Security Overview",
+      "description": "Pucora is built with a security-first approach in mind. Read about the security features bundled by Pucora and the principles and design philosophy behind it",
+      "weight": -1000,
+      "section": "security"
+    },
+    {
+      "slug": "service-settings/CORS",
+      "file": "service-settings/CORS.md",
+      "title": "CORS",
+      "description": "Configure Cross-Origin Resource Sharing (CORS) in Pucora API Gateway to enable secure communication between different domains and APIs.",
+      "weight": 20,
+      "section": "service-settings"
+    },
+    {
+      "slug": "service-settings/TLS",
+      "file": "service-settings/TLS.md",
+      "title": "TLS",
+      "description": "Learn how to configure Transport Layer Security (TLS) in Pucora API Gateway to ensure secure HTTP and HTTP/2 communication between clients and your APIs",
+      "weight": 30,
+      "section": "service-settings"
+    },
+    {
+      "slug": "service-settings",
+      "file": "service-settings.md",
+      "title": "Service Settings",
+      "description": "Service settings are optional flags that allow you to change how Pucora behaves globally for all endpoints across configuration.",
+      "weight": -1000,
+      "section": "service-settings"
+    },
+    {
+      "slug": "service-settings/health",
+      "file": "service-settings/health.md",
+      "title": "Health check endpoint",
+      "description": "",
+      "weight": 1100,
+      "section": "service-settings"
+    },
+    {
+      "slug": "service-settings/http-server-settings",
+      "file": "service-settings/http-server-settings.md",
+      "title": "HTTP Server settings",
+      "description": "Configure HTTP server settings in Pucora API Gateway for optimal performance, security, and compatibility with your infrastructure",
+      "weight": 50,
+      "section": "service-settings"
+    },
+    {
+      "slug": "service-settings/http-transport-settings",
+      "file": "service-settings/http-transport-settings.md",
+      "title": "HTTP Global Client settings",
+      "description": "",
+      "weight": 140,
+      "section": "service-settings"
+    },
+    {
+      "slug": "service-settings/router-options",
+      "file": "service-settings/router-options.md",
+      "title": "Router options",
+      "description": "Explore the router options available in Pucora API Gateway to customize the routing behavior and optimize API request handling",
+      "weight": 120,
+      "section": "service-settings"
+    },
+    {
+      "slug": "service-settings/security",
+      "file": "service-settings/security.md",
+      "title": "HTTP Security",
+      "description": "Pucora's HTTP Security component enhances API protection by enabling features like Clickjacking protection, MIME-Sniffing prevention, and XSS protection, and more",
+      "weight": 40,
+      "section": "service-settings"
+    },
+    {
+      "slug": "telemetry",
+      "file": "telemetry.md",
+      "title": "Metrics and Traces overview",
+      "description": "Learn about the telemetry and monitoring capabilities of Pucora API Gateway, enabling real-time visibility and analysis of API performance",
+      "weight": 10,
+      "section": "telemetry"
+    },
+    {
+      "slug": "telemetry/azure",
+      "file": "telemetry/azure.md",
+      "title": "Azure Monitor",
+      "description": "Integrate Azure Telemetry with Pucora for effective monitoring and performance analysis of your APIs. Follow our documentation to set up seamless integration with your Azure services.",
+      "weight": 140,
+      "section": "telemetry"
+    },
+    {
+      "slug": "telemetry/datadog",
+      "file": "telemetry/datadog.md",
+      "title": "Datadog",
+      "description": "Integrate Datadog telemetry with Pucora API Gateway for advanced monitoring, visualization, and analysis of your API ecosystem",
+      "weight": 90,
+      "section": "telemetry"
+    },
+    {
+      "slug": "telemetry/extended-metrics",
+      "file": "telemetry/extended-metrics.md",
+      "title": "Metrics API",
+      "description": "Explore the extended metrics available in Pucora API Gateway telemetry for detailed insights into API performance and usage",
+      "weight": 1000,
+      "section": "telemetry"
+    },
+    {
+      "slug": "telemetry/grafana",
+      "file": "telemetry/grafana.md",
+      "title": "Grafana Dashboard",
+      "description": "Discover how to set up telemetry and monitoring for Pucora API Gateway using Grafana, gaining insights into performance and usage metrics",
+      "weight": 40,
+      "section": "telemetry"
+    },
+    {
+      "slug": "telemetry/influxdb",
+      "file": "telemetry/influxdb.md",
+      "title": "InfluxDB",
+      "description": "Integrate InfluxDB telemetry with Pucora API Gateway for efficient data collection, storage, and visualization of API performance metrics",
+      "weight": 50,
+      "section": "telemetry"
+    },
+    {
+      "slug": "telemetry/jaeger",
+      "file": "telemetry/jaeger.md",
+      "title": "Jaeger",
+      "description": "Integrate Jaeger telemetry with Pucora API Gateway for distributed tracing and monitoring of your microservices architecture",
+      "weight": 110,
+      "section": "telemetry"
+    },
+    {
+      "slug": "telemetry/opencensus",
+      "file": "telemetry/opencensus.md",
+      "title": "OpenCensus (deprecated)",
+      "description": "The OpenCensus telemetry integration is now deprecated. All efforts are now put into OpenTelemetry.",
+      "weight": 60,
+      "section": "telemetry"
+    },
+    {
+      "slug": "telemetry/opentelemetry-by-endpoint",
+      "file": "telemetry/opentelemetry-by-endpoint.md",
+      "title": "OpenTelemetry by Endpoint",
+      "description": "Set different metrics and traces settings per endpoint or per backend individually, overriding existing OpenTelemetry settings that are defined at the service level",
+      "weight": 22,
+      "section": "telemetry"
+    },
+    {
+      "slug": "telemetry/opentelemetry-layers-metrics",
+      "file": "telemetry/opentelemetry-layers-metrics.md",
+      "title": "OpenTelemetry - Layers and Metrics",
+      "description": "Learn about the metrics available when activating OpenTelemetry on Pucora API Gateway, enabling real-time visibility and analysis of API performance",
+      "weight": 21,
+      "section": "telemetry"
+    },
+    {
+      "slug": "telemetry/opentelemetry",
+      "file": "telemetry/opentelemetry.md",
+      "title": "OpenTelemetry",
+      "description": "Learn about the telemetry and monitoring capabilities of Pucora API Gateway using OTEL, enabling real-time visibility and analysis of API performance",
+      "weight": 20,
+      "section": "telemetry"
+    },
+    {
+      "slug": "telemetry/prometheus",
+      "file": "telemetry/prometheus.md",
+      "title": "Prometheus",
+      "description": "Learn how to integrate Prometheus telemetry with Pucora API Gateway for efficient monitoring and performance analysis of your APIs",
+      "weight": 30,
+      "section": "telemetry"
+    },
+    {
+      "slug": "telemetry/stackdriver",
+      "file": "telemetry/stackdriver.md",
+      "title": "Google Cloud",
+      "description": "Monitor Pucora API Gateway using Google Cloud (formerly Stackdriver) for comprehensive insights and effective troubleshooting",
+      "weight": 130,
+      "section": "telemetry"
+    },
+    {
+      "slug": "telemetry/xray",
+      "file": "telemetry/xray.md",
+      "title": "AWS X-Ray",
+      "description": "Push Pucora metrics to AWS X-Ray Telemetry with a small snippet of configuration to monitor and analyze Pucora API Gateway performance effectively",
+      "weight": 120,
+      "section": "telemetry"
+    },
+    {
+      "slug": "telemetry/zipkin",
+      "file": "telemetry/zipkin.md",
+      "title": "Zipkin",
+      "description": "Integrate Zipkin telemetry to monitor and trace Pucora API Gateway requests efficiently for enhanced performance",
+      "weight": 100,
+      "section": "telemetry"
+    },
+    {
+      "slug": "throttling",
+      "file": "throttling.md",
+      "title": "Traffic Management Overview",
+      "description": "Learn how Pucora's traffic management features help optimize your API's performance, prevent abuse, and ensure a seamless user experience.",
+      "weight": 910,
+      "section": "throttling"
+    },
+    {
+      "slug": "throttling/botdetector",
+      "file": "throttling/botdetector.md",
+      "title": "Bot detector",
+      "description": "Implement bot detection and throttling mechanisms to prevent API abuse and ensure fair usage. Follow our comprehensive guide to protect your APIs from malicious bot traffic.",
+      "weight": 990,
+      "section": "throttling"
+    },
+    {
+      "slug": "throttling/cluster",
+      "file": "throttling/cluster.md",
+      "title": "Cluster rate-limit",
+      "description": "Employ cluster throttling to optimize API performance and prevent overload scenarios through Pucora",
+      "weight": 970,
+      "section": "throttling"
+    },
+    {
+      "slug": "throttling/load-balancing",
+      "file": "throttling/load-balancing.md",
+      "title": "Load balancing",
+      "description": "Explore load balancing and throttling strategies in Pucora API Gateway to ensure optimal performance and resource utilization",
+      "weight": 920,
+      "section": "throttling"
+    },
+    {
+      "slug": "throttling/spike-arrest",
+      "file": "throttling/spike-arrest.md",
+      "title": "Understanding Spike Arrest and Burst",
+      "description": "Spike Arrest throttling in Pucora to regulate API traffic and prevent overload situations effectively",
+      "weight": 9300,
+      "section": "throttling"
+    },
+    {
+      "slug": "throttling/timeouts",
+      "file": "throttling/timeouts.md",
+      "title": "Timeouts",
+      "description": "Learn how to effectively manage API throttling and timeouts with Pucora API Gateway to ensure optimal performance and prevent abuse",
+      "weight": 200,
+      "section": "throttling"
+    },
+    {
+      "slug": "throttling/token-bucket",
+      "file": "throttling/token-bucket.md",
+      "title": "Understanding the Token Bucket",
+      "description": "Implement token bucket-based throttling mechanism in Pucora API Gateway to control API access rates and prevent abuse",
+      "weight": 9200,
+      "section": "throttling"
+    },
+    {
+      "slug": "websockets",
+      "file": "websockets.md",
+      "title": "WebSockets",
+      "description": "Bidirectional real-time communication using RFC-6455 WebSockets with multiplex and direct proxy modes",
+      "weight": 200,
+      "section": "websockets"
+    }
+  ],
+  "nav": [
+    {
+      "id": "home",
+      "label": "Home",
+      "pages": [
+        {
+          "slug": "home",
+          "file": "_home.md",
+          "title": "Pucora API Gateway Documentation",
+          "description": "Access the documentation for Pucora API Gateway, including guides, tutorials, and reference materials for its implementation",
+          "weight": 100,
+          "section": "home"
+        }
+      ]
+    },
+    {
+      "id": "overview",
+      "label": "Getting Started",
+      "pages": [
+        {
+          "slug": "overview",
+          "file": "overview.md",
+          "title": "Introduction",
+          "description": "Explore the comprehensive documentation for Pucora API Gateway, including an overview, guides, and best practices",
+          "weight": -10000,
+          "section": "overview"
+        },
+        {
+          "slug": "overview/installing",
+          "file": "overview/installing.md",
+          "title": "Installation",
+          "description": "Follow our step-by-step installation guide to set up and configure Pucora API Gateway, enabling efficient and scalable API management.",
+          "weight": 10,
+          "section": "overview"
+        },
+        {
+          "slug": "overview/run",
+          "file": "overview/run.md",
+          "title": "Running Pucora",
+          "description": "All options of the pucora command to manage the service, write plugins, or get information about the installed version.",
+          "weight": 20,
+          "section": "overview"
+        },
+        {
+          "slug": "overview/playground",
+          "file": "overview/playground.md",
+          "title": "Playground",
+          "description": "Explore Pucora Playground and experiment with different API configurations before deploying them",
+          "weight": 50,
+          "section": "overview"
+        },
+        {
+          "slug": "overview/lura-vs-pucora",
+          "file": "overview/lura-vs-pucora.md",
+          "title": "Lura vs. Pucora",
+          "description": "The Lura Project is the API gateway engine; Pucora CE is the ready-to-use distribution built on top of it.",
+          "weight": 100,
+          "section": "overview"
+        },
+        {
+          "slug": "overview/verifying-packages",
+          "file": "overview/verifying-packages.md",
+          "title": "Verifying packages (PGP and SHA256)",
+          "description": "",
+          "weight": 100,
+          "section": "overview"
+        },
+        {
+          "slug": "overview/guides",
+          "file": "overview/guides.md",
+          "title": "Tutorials and Guides",
+          "description": "Access a collection of comprehensive guides for Pucora API Gateway, providing step-by-step instructions and best practices for various use cases",
+          "weight": 1000,
+          "section": "overview"
+        }
+      ]
+    },
+    {
+      "id": "configuration",
+      "label": "Configuration",
+      "pages": [
+        {
+          "slug": "configuration",
+          "file": "configuration.md",
+          "title": "Configuration overview",
+          "description": "Get a comprehensive guide on configuring Pucora API Gateway to optimize and streamline your API management processes",
+          "weight": -1000,
+          "section": "configuration"
+        },
+        {
+          "slug": "configuration/configurator",
+          "file": "configuration/configurator.md",
+          "title": "Pucora Configurator",
+          "description": "Generate pucora.json from YAML profiles and built-in presets for REST, gRPC, WebSockets, pub/sub, and more",
+          "weight": -900,
+          "section": "configuration"
+        },
+        {
+          "slug": "configuration/structure",
+          "file": "configuration/structure.md",
+          "title": "The configuration file",
+          "description": "Learn about the configuration structure and organization in Pucora API Gateway to effectively define the behavior of your API gateway",
+          "weight": 10,
+          "section": "configuration"
+        },
+        {
+          "slug": "configuration/check",
+          "file": "configuration/check.md",
+          "title": "Configuration check",
+          "description": "The pucora check command validates Pucora configuration files written in any of its supported formats and outputs syntax or linting problems.",
+          "weight": 20,
+          "section": "configuration"
+        },
+        {
+          "slug": "configuration/audit",
+          "file": "configuration/audit.md",
+          "title": "Configuration audit",
+          "description": "Learn how to configure configuration auditing in Pucora API Gateway to ensure file integrity and print security recommendations and statistical information",
+          "weight": 21,
+          "section": "configuration"
+        },
+        {
+          "slug": "configuration/flexible-config",
+          "file": "configuration/flexible-config.md",
+          "title": "Flexible Configuration",
+          "description": "Discover the flexible configuration options offered by Pucora API Gateway, allowing you to customize and fine-tune your API gateway setup",
+          "weight": 30,
+          "section": "configuration"
+        },
+        {
+          "slug": "configuration/templates",
+          "file": "configuration/templates.md",
+          "title": "Configuration with templates",
+          "description": "Understanding how to work with Go templates in the flexible configuration and other components. Template syntax and practical snippets to resolve common situations.",
+          "weight": 31,
+          "section": "configuration"
+        },
+        {
+          "slug": "configuration/supported-formats",
+          "file": "configuration/supported-formats.md",
+          "title": "Supported file formats",
+          "description": "Explore the supported formats for Pucora configuration. Find the best fit for your API Gateway setup",
+          "weight": 35,
+          "section": "configuration"
+        },
+        {
+          "slug": "configuration/designer",
+          "file": "configuration/designer.md",
+          "title": "Designer: Graphical Interface",
+          "description": "Discover the API Configuration Designer in Pucora API Gateway, enabling intuitive and visual configuration management for your APIs",
+          "weight": 40,
+          "section": "configuration"
+        },
+        {
+          "slug": "configuration/environment-vars",
+          "file": "configuration/environment-vars.md",
+          "title": "Environment vars",
+          "description": "Learn how to leverage environment variables in Pucora API Gateway configuration for flexible and dynamic configuration management",
+          "weight": 40,
+          "section": "configuration"
+        },
+        {
+          "slug": "configuration/working-directory",
+          "file": "configuration/working-directory.md",
+          "title": "Working Directory",
+          "description": "Pucora supports absolute and relative paths in configurations. Absolute paths provide clarity, while relative paths use the working directory, making them flexible for varied environments.",
+          "weight": 100,
+          "section": "configuration"
+        },
+        {
+          "slug": "configuration/migrating",
+          "file": "configuration/migrating.md",
+          "title": "Upgrading the configuration",
+          "description": "Seamlessly migrate your Pucora configuration to a new version. Hassle-free transition for your API Gateway",
+          "weight": 1000,
+          "section": "configuration"
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "label": "Design",
+      "pages": [
+        {
+          "slug": "design",
+          "file": "design.md",
+          "title": "The big picture",
+          "description": "Discover the Pucora API architecture and its design principles, as well its most important internal packages.",
+          "weight": -1,
+          "section": "design"
+        },
+        {
+          "slug": "design/backend-for-frontend",
+          "file": "design/backend-for-frontend.md",
+          "title": "Backend For Frontend",
+          "description": "Discover how to leverage the Backend-for-Frontend (BFF) design pattern with Pucora API Gateway to optimize frontend-backend communication",
+          "weight": 10,
+          "section": "design"
+        },
+        {
+          "slug": "design/zero-trust",
+          "file": "design/zero-trust.md",
+          "title": "Zero-trust security",
+          "description": "The zero-trust security is a deny by default software design choice, where the exposed surface is limited to what it's explicitly declared.",
+          "weight": 10,
+          "section": "design"
+        },
+        {
+          "slug": "design/execution-flow",
+          "file": "design/execution-flow.md",
+          "title": "The execution flow",
+          "description": "Understand the execution flow design of Pucora API Gateway. Is the configuration X executed before the configuration Y?",
+          "weight": 100,
+          "section": "design"
+        }
+      ]
+    },
+    {
+      "id": "developer",
+      "label": "Developer",
+      "pages": [
+        {
+          "slug": "developer",
+          "file": "developer.md",
+          "title": "Developer Tools",
+          "description": "Discover what are the development tools you can compile additionally to work with Pucora Open Source edition. These tools are not bundled by default with Pucora.",
+          "weight": 10,
+          "section": "developer"
+        },
+        {
+          "slug": "developer/integration-tests",
+          "file": "developer/integration-tests.md",
+          "title": "Run integration tests",
+          "description": "",
+          "weight": 30,
+          "section": "developer"
+        },
+        {
+          "slug": "developer/hot-reload",
+          "file": "developer/hot-reload.md",
+          "title": "Watch and hot reload",
+          "description": "Explore the hot reload feature in Pucora API Gateway, allowing dynamic configuration updates without service interruption for enhanced agility on development",
+          "weight": 80,
+          "section": "developer"
+        },
+        {
+          "slug": "developer/IDE-integration",
+          "file": "developer/IDE-integration.md",
+          "title": "IDE integration",
+          "description": "Enhance your development workflow by integrating Pucora with your favorite IDE. Follow our comprehensive guide to seamlessly integrate Pucora into your development environment.",
+          "weight": 300,
+          "section": "developer"
+        }
+      ]
+    },
+    {
+      "id": "deploying",
+      "label": "Deploying",
+      "pages": [
+        {
+          "slug": "deploying",
+          "file": "deploying.md",
+          "title": "Best practices",
+          "description": "Explore the best practices and guidelines for deploying Pucora API Gateway in various environments, ensuring a smooth and efficient deployment process",
+          "weight": 1,
+          "section": "deploying"
+        },
+        {
+          "slug": "deploying/clustering",
+          "file": "deploying/clustering.md",
+          "title": "Running in a cluster",
+          "description": "Discover the best practices for deploying Pucora in a clustered environment. Scale your API infrastructure effectively using our comprehensive clustering deployment guide.",
+          "weight": 1,
+          "section": "deploying"
+        },
+        {
+          "slug": "deploying/server-dimensioning",
+          "file": "deploying/server-dimensioning.md",
+          "title": "Server requirements",
+          "description": "Learn how to dimension and scale servers for deploying Pucora API Gateway, ensuring optimal performance and resource allocation",
+          "weight": 10,
+          "section": "deploying"
+        },
+        {
+          "slug": "deploying/ci-cd",
+          "file": "deploying/ci-cd.md",
+          "title": "CI/CD integration",
+          "description": "Streamline your API deployments with Pucora using continuous integration and continuous deployment (CI/CD) practices. Follow our comprehensive guide to automate your deployment pipeline.",
+          "weight": 20,
+          "section": "deploying"
+        },
+        {
+          "slug": "deploying/docker",
+          "file": "deploying/docker.md",
+          "title": "Docker artifact",
+          "description": "Learn how to deploy Pucora API Gateway using Docker, enabling containerized deployments for efficient scaling and management",
+          "weight": 20,
+          "section": "deploying"
+        },
+        {
+          "slug": "deploying/kubernetes",
+          "file": "deploying/kubernetes.md",
+          "title": "To Kubernetes",
+          "description": "Discover the best practices and guidelines for deploying Pucora API Gateway on Kubernetes, enabling scalable and efficient API management",
+          "weight": 30,
+          "section": "deploying"
+        },
+        {
+          "slug": "deploying/helm",
+          "file": "deploying/helm.md",
+          "title": "Helm Chart",
+          "description": "Install, configure, upgrade, and test the official Pucora Helm chart on Kubernetes — ConfigMap, Secret, and immutable image modes.",
+          "weight": 35,
+          "section": "deploying"
+        }
+      ]
+    },
+    {
+      "id": "backends",
+      "label": "Backends",
+      "pages": [
+        {
+          "slug": "backends/data-manipulation",
+          "file": "backends/data-manipulation.md",
+          "title": "Basic data manipulation: Group, Filter, Map",
+          "description": "Explore data manipulation capabilities in Pucora API Gateway, enabling transformation and manipulation of response data",
+          "weight": 20,
+          "section": "backends"
+        },
+        {
+          "slug": "backends",
+          "file": "backends.md",
+          "title": "The backend object",
+          "description": "Explore the backend configuration options in Pucora API Gateway, allowing you to connect and integrate with your microservices efficiently",
+          "weight": 20,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/amqp-consumer",
+          "file": "backends/amqp-consumer.md",
+          "title": "RabbitMQ Consumer",
+          "description": "Integrate AMQP consumers into Pucora API Gateway for seamless communication with message queue systems like RabbitMQ",
+          "weight": 100,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/caching",
+          "file": "backends/caching.md",
+          "title": "Response caching",
+          "description": "Learn how to implement effective caching strategies in Pucora API Gateway to improve API performance and reduce backend load",
+          "weight": 100,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/amqp-producer",
+          "file": "backends/amqp-producer.md",
+          "title": "RabbitMQ Producer",
+          "description": "Integrate AMQP producers with Pucora for seamless communication with backend systems. Follow our documentation to set up reliable and scalable messaging with Advanced Message Queuing Protocol (AMQP).",
+          "weight": 110,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/flatmap",
+          "file": "backends/flatmap.md",
+          "title": "Response manipulation on arrays",
+          "description": "Integrate the FlatMap backend into Pucora API Gateway for array data transformation and mapping operations in your API ecosystem",
+          "weight": 110,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/pubsub",
+          "file": "backends/pubsub.md",
+          "title": "Publisher/subscribe (Kafka,NATS and cloud)",
+          "description": "Integrate Pub-Sub backend into Pucora API Gateway to enable event-driven communication and real-time data updates in your API ecosystem",
+          "weight": 130,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/pubsub/kafka",
+          "file": "backends/pubsub/kafka.md",
+          "title": "Kafka Advanced PubSub",
+          "description": "Kafka publisher and subscriber with mTLS, SASL, Azure Event Hub, and idempotent producers",
+          "weight": 135,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/graphql",
+          "file": "backends/graphql.md",
+          "title": "GraphQL",
+          "description": "Integrate GraphQL backends into Pucora API Gateway to leverage the power of GraphQL in your microservices architecture",
+          "weight": 140,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/http-client",
+          "file": "backends/http-client.md",
+          "title": "HTTP Per-backend Client settings",
+          "description": "The HTTP client options allow you to configure the behavior to connect to your backends using HTTP",
+          "weight": 145,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/lambda",
+          "file": "backends/lambda.md",
+          "title": "Lambda functions",
+          "description": "Integrate AWS Lambda functions into Pucora API Gateway to leverage serverless computing for scalable and event-driven API processing",
+          "weight": 150,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/service-discovery",
+          "file": "backends/service-discovery.md",
+          "title": "Service Discovery",
+          "description": "Integrate service discovery mechanisms into Pucora API Gateway to dynamically discover and route requests to available backend services",
+          "weight": 160,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/shadow-backends",
+          "file": "backends/shadow-backends.md",
+          "title": "Traffic shadowing/mirroring",
+          "description": "Implement shadow backends in Pucora API Gateway for non-intrusive testing and monitoring of new backend services or API versions",
+          "weight": 170,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/grpc",
+          "file": "backends/grpc.md",
+          "title": "gRPC client",
+          "description": "Call upstream gRPC services from REST endpoints using a protobuf catalog",
+          "weight": 215,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/soap",
+          "file": "backends/soap.md",
+          "title": "SOAP",
+          "description": "Connect legacy SOAP/XML services to modern REST clients with templates, WSDL, and WS-Security",
+          "weight": 230,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/martian",
+          "file": "backends/martian.md",
+          "title": "Requests and response static manipulation",
+          "description": "Learn how to integrate the Martian component into Pucora API Gateway, enabling static request and response transformations for your APIs",
+          "weight": 300,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/supported-encodings",
+          "file": "backends/supported-encodings.md",
+          "title": "Origin response formats",
+          "description": "Explore the supported encodings for seamless integration with backend systems in Pucora. Learn how to optimize data exchange and ensure compatibility between Pucora and your backend services.",
+          "weight": 400,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/detailed-errors",
+          "file": "backends/detailed-errors.md",
+          "title": "Strategies to return headers and errors",
+          "description": "Implement returning of backend headers and errors to provide informative and customized error messages to API consumers",
+          "weight": 430,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/circuit-breaker",
+          "file": "backends/circuit-breaker.md",
+          "title": "Circuit Breaker",
+          "description": "Implement the circuit breaker pattern in Pucora API Gateway to enhance the resilience and stability of your API ecosystem",
+          "weight": 930,
+          "section": "backends"
+        },
+        {
+          "slug": "backends/rate-limit",
+          "file": "backends/rate-limit.md",
+          "title": "Proxy rate limit",
+          "description": "Implement rate limiting in Pucora API Gateway backends to control and manage API usage, preventing abuse and ensuring fair resource allocation",
+          "weight": 960,
+          "section": "backends"
+        }
+      ]
+    },
+    {
+      "id": "endpoints",
+      "label": "Endpoints",
+      "pages": [
+        {
+          "slug": "endpoints/response-manipulation",
+          "file": "endpoints/response-manipulation.md",
+          "title": "API Composition and aggregation",
+          "description": "Explore the response manipulation capabilities in Pucora API Gateway, allowing you to modify and enhance API responses for a better user experience",
+          "weight": 10,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints",
+          "file": "endpoints.md",
+          "title": "The endpoint object",
+          "description": "Configure and manage API endpoints with Pucora. Learn how to define routes, backends, and middleware for your API gateway.",
+          "weight": 10,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints/debug-endpoint",
+          "file": "endpoints/debug-endpoint.md",
+          "title": "Debug endpoint",
+          "description": "Learn how to utilize the debug endpoint in Pucora API Gateway for troubleshooting and debugging purposes during API development and testing",
+          "weight": 20,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints/echo-endpoint",
+          "file": "endpoints/echo-endpoint.md",
+          "title": "Echo endpoint",
+          "description": "Learn how to configure the Echo endpoint in Pucora. A straightforward way to test your API Gateway setup containing the details of a request.",
+          "weight": 30,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints/parameter-forwarding",
+          "file": "endpoints/parameter-forwarding.md",
+          "title": "Forwarding query strings and headers",
+          "description": "Learn how to forward and manipulate parameters effectively using Pucora API Gateway, ensuring seamless communication between clients and microservices",
+          "weight": 30,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints/no-op",
+          "file": "endpoints/no-op.md",
+          "title": "No-op (proxy only)",
+          "description": "",
+          "weight": 40,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints/sequential-proxy",
+          "file": "endpoints/sequential-proxy.md",
+          "title": "Sequential Proxy (chain reqs.)",
+          "description": "Explore the sequential proxying capability in Pucora API Gateway, allowing you to chain multiple requests and orchestrate complex API workflows",
+          "weight": 80,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints/concurrent-requests",
+          "file": "endpoints/concurrent-requests.md",
+          "title": "Concurrent Requests",
+          "description": "Learn how Pucora API Gateway efficiently handles concurrent requests to ensure scalability, performance, and optimal resource utilization",
+          "weight": 150,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints/streaming",
+          "file": "endpoints/streaming.md",
+          "title": "HTTP Streaming and SSE",
+          "description": "Transparent long-lived HTTP streams and SSE using the no-op proxy encoding",
+          "weight": 150,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints/common-expression-language-cel",
+          "file": "endpoints/common-expression-language-cel.md",
+          "title": "Conditional requests and responses",
+          "description": "Learn how to utilize the Common Expression Language (CEL) in Pucora API Gateway for dynamic routing and advanced request handling",
+          "weight": 180,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints/lua",
+          "file": "endpoints/lua.md",
+          "title": "Lua scripts",
+          "description": "Explore the power of Lua scripting in Pucora API Gateway, allowing you to customize and extend the behavior of your API gateway",
+          "weight": 200,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints/content-types",
+          "file": "endpoints/content-types.md",
+          "title": "Returned response formats",
+          "description": "Discover how Pucora API Gateway handles various content types, ensuring proper parsing and transformation for seamless data exchange",
+          "weight": 410,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints/status-codes",
+          "file": "endpoints/status-codes.md",
+          "title": "Status Codes",
+          "description": "Learn how to interpret HTTP status codes in Pucora API Gateway, ensuring accurate and meaningful responses to API consumers",
+          "weight": 420,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints/static-proxy",
+          "file": "endpoints/static-proxy.md",
+          "title": "Static responses on failures (stubs)",
+          "description": "Learn how to configure static proxy endpoints in Pucora API Gateway to return stubs and static data on certain events",
+          "weight": 440,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints/json-schema",
+          "file": "endpoints/json-schema.md",
+          "title": "JSON Schema request validation",
+          "description": "Implement JSON Schema validation in Pucora API Gateway to ensure data integrity and adherence to defined data structures for API requests",
+          "weight": 450,
+          "section": "endpoints"
+        },
+        {
+          "slug": "endpoints/rate-limit",
+          "file": "endpoints/rate-limit.md",
+          "title": "Endpoint Rate Limit",
+          "description": "Implement rate-limiting strategies in Pucora API Gateway to control the number of requests and prevent API abuse or overloading",
+          "weight": 950,
+          "section": "endpoints"
+        }
+      ]
+    },
+    {
+      "id": "service-settings",
+      "label": "Service Settings",
+      "pages": [
+        {
+          "slug": "service-settings",
+          "file": "service-settings.md",
+          "title": "Service Settings",
+          "description": "Service settings are optional flags that allow you to change how Pucora behaves globally for all endpoints across configuration.",
+          "weight": -1000,
+          "section": "service-settings"
+        },
+        {
+          "slug": "service-settings/CORS",
+          "file": "service-settings/CORS.md",
+          "title": "CORS",
+          "description": "Configure Cross-Origin Resource Sharing (CORS) in Pucora API Gateway to enable secure communication between different domains and APIs.",
+          "weight": 20,
+          "section": "service-settings"
+        },
+        {
+          "slug": "service-settings/TLS",
+          "file": "service-settings/TLS.md",
+          "title": "TLS",
+          "description": "Learn how to configure Transport Layer Security (TLS) in Pucora API Gateway to ensure secure HTTP and HTTP/2 communication between clients and your APIs",
+          "weight": 30,
+          "section": "service-settings"
+        },
+        {
+          "slug": "service-settings/security",
+          "file": "service-settings/security.md",
+          "title": "HTTP Security",
+          "description": "Pucora's HTTP Security component enhances API protection by enabling features like Clickjacking protection, MIME-Sniffing prevention, and XSS protection, and more",
+          "weight": 40,
+          "section": "service-settings"
+        },
+        {
+          "slug": "service-settings/http-server-settings",
+          "file": "service-settings/http-server-settings.md",
+          "title": "HTTP Server settings",
+          "description": "Configure HTTP server settings in Pucora API Gateway for optimal performance, security, and compatibility with your infrastructure",
+          "weight": 50,
+          "section": "service-settings"
+        },
+        {
+          "slug": "service-settings/router-options",
+          "file": "service-settings/router-options.md",
+          "title": "Router options",
+          "description": "Explore the router options available in Pucora API Gateway to customize the routing behavior and optimize API request handling",
+          "weight": 120,
+          "section": "service-settings"
+        },
+        {
+          "slug": "service-settings/http-transport-settings",
+          "file": "service-settings/http-transport-settings.md",
+          "title": "HTTP Global Client settings",
+          "description": "",
+          "weight": 140,
+          "section": "service-settings"
+        },
+        {
+          "slug": "service-settings/health",
+          "file": "service-settings/health.md",
+          "title": "Health check endpoint",
+          "description": "",
+          "weight": 1100,
+          "section": "service-settings"
+        }
+      ]
+    },
+    {
+      "id": "authorization",
+      "label": "Authentication & Authorization",
+      "pages": [
+        {
+          "slug": "authorization",
+          "file": "authorization.md",
+          "title": "Intro to AuthZ and AuthN",
+          "description": "Overview of the options available to integrate authentication and authorization services with Pucora API Gateway for secure access control to your APIs",
+          "weight": -100,
+          "section": "authorization"
+        },
+        {
+          "slug": "authorization/jwt-overview",
+          "file": "authorization/jwt-overview.md",
+          "title": "JWT overview",
+          "description": "Gain an overview of JSON Web Tokens (JWT) and learn how to implement JWT-based authorization with Pucora API Gateway for secure API access",
+          "weight": 10,
+          "section": "authorization"
+        },
+        {
+          "slug": "authorization/jwt-validation",
+          "file": "authorization/jwt-validation.md",
+          "title": "JWT Validation",
+          "description": "Implement JWT validation with Pucora API Gateway to secure your APIs and prevent unauthorized access.",
+          "weight": 20,
+          "section": "authorization"
+        },
+        {
+          "slug": "authorization/jwk-caching",
+          "file": "authorization/jwk-caching.md",
+          "title": "JWK key caching",
+          "description": "Implement shared JWK caching for efficient authorization in Pucora. Learn how to cache and manage JSON Web Key (JWK) sets to optimize authorization's performance.",
+          "weight": 21,
+          "section": "authorization"
+        },
+        {
+          "slug": "authorization/jwt-signing",
+          "file": "authorization/jwt-signing.md",
+          "title": "JWT Signing",
+          "description": "Pucora's JWT signing wraps your login endpoint, signing payloads with your secret key. Perfect for monolith migrations or setups without an OAuth server.",
+          "weight": 30,
+          "section": "authorization"
+        },
+        {
+          "slug": "authorization/revoking-tokens",
+          "file": "authorization/revoking-tokens.md",
+          "title": "Revoking tokens",
+          "description": "Learn how to implement token revocation mechanisms in Pucora API Gateway to manage and invalidate access tokens when needed",
+          "weight": 40,
+          "section": "authorization"
+        },
+        {
+          "slug": "authorization/mutual-authentication",
+          "file": "authorization/mutual-authentication.md",
+          "title": "Mutual TLS Authentication (mTLS)",
+          "description": "Implement mutual authentication in Pucora API Gateway to establish a secure and trusted communication channel between clients and APIs",
+          "weight": 50,
+          "section": "authorization"
+        },
+        {
+          "slug": "authorization/client-credentials",
+          "file": "authorization/client-credentials.md",
+          "title": "OAuth2 Client credentials",
+          "description": "Learn how to implement OAuth 2.0 Client Credentials (2-legged flow) with Pucora API Gateway to secure your APIs for machine-to-machine communication",
+          "weight": 50,
+          "section": "authorization"
+        },
+        {
+          "slug": "authorization/auth0",
+          "file": "authorization/auth0.md",
+          "title": "Auth0 integration",
+          "description": "Integrate Auth0 authentication and authorization services with Pucora API Gateway for secure and seamless access control to your APIs",
+          "weight": 100,
+          "section": "authorization"
+        },
+        {
+          "slug": "authorization/descope",
+          "file": "authorization/descope.md",
+          "title": "Descope integration",
+          "description": "Learn how to integrate Descope authorization with Pucora API Gateway for secure and controlled access to your APIs.",
+          "weight": 110,
+          "section": "authorization"
+        },
+        {
+          "slug": "authorization/keycloak",
+          "file": "authorization/keycloak.md",
+          "title": "Keycloak integration",
+          "description": "Learn how to integrate Keycloak authorization with Pucora API Gateway for secure and controlled access to your APIs.",
+          "weight": 110,
+          "section": "authorization"
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "label": "Security",
+      "pages": [
+        {
+          "slug": "security",
+          "file": "security.md",
+          "title": "Security Overview",
+          "description": "Pucora is built with a security-first approach in mind. Read about the security features bundled by Pucora and the principles and design philosophy behind it",
+          "weight": -1000,
+          "section": "security"
+        }
+      ]
+    },
+    {
+      "id": "throttling",
+      "label": "Throttling",
+      "pages": [
+        {
+          "slug": "throttling/timeouts",
+          "file": "throttling/timeouts.md",
+          "title": "Timeouts",
+          "description": "Learn how to effectively manage API throttling and timeouts with Pucora API Gateway to ensure optimal performance and prevent abuse",
+          "weight": 200,
+          "section": "throttling"
+        },
+        {
+          "slug": "throttling",
+          "file": "throttling.md",
+          "title": "Traffic Management Overview",
+          "description": "Learn how Pucora's traffic management features help optimize your API's performance, prevent abuse, and ensure a seamless user experience.",
+          "weight": 910,
+          "section": "throttling"
+        },
+        {
+          "slug": "throttling/load-balancing",
+          "file": "throttling/load-balancing.md",
+          "title": "Load balancing",
+          "description": "Explore load balancing and throttling strategies in Pucora API Gateway to ensure optimal performance and resource utilization",
+          "weight": 920,
+          "section": "throttling"
+        },
+        {
+          "slug": "throttling/cluster",
+          "file": "throttling/cluster.md",
+          "title": "Cluster rate-limit",
+          "description": "Employ cluster throttling to optimize API performance and prevent overload scenarios through Pucora",
+          "weight": 970,
+          "section": "throttling"
+        },
+        {
+          "slug": "throttling/botdetector",
+          "file": "throttling/botdetector.md",
+          "title": "Bot detector",
+          "description": "Implement bot detection and throttling mechanisms to prevent API abuse and ensure fair usage. Follow our comprehensive guide to protect your APIs from malicious bot traffic.",
+          "weight": 990,
+          "section": "throttling"
+        },
+        {
+          "slug": "throttling/token-bucket",
+          "file": "throttling/token-bucket.md",
+          "title": "Understanding the Token Bucket",
+          "description": "Implement token bucket-based throttling mechanism in Pucora API Gateway to control API access rates and prevent abuse",
+          "weight": 9200,
+          "section": "throttling"
+        },
+        {
+          "slug": "throttling/spike-arrest",
+          "file": "throttling/spike-arrest.md",
+          "title": "Understanding Spike Arrest and Burst",
+          "description": "Spike Arrest throttling in Pucora to regulate API traffic and prevent overload situations effectively",
+          "weight": 9300,
+          "section": "throttling"
+        }
+      ]
+    },
+    {
+      "id": "telemetry",
+      "label": "Telemetry & Observability",
+      "pages": [
+        {
+          "slug": "telemetry",
+          "file": "telemetry.md",
+          "title": "Metrics and Traces overview",
+          "description": "Learn about the telemetry and monitoring capabilities of Pucora API Gateway, enabling real-time visibility and analysis of API performance",
+          "weight": 10,
+          "section": "telemetry"
+        },
+        {
+          "slug": "telemetry/opentelemetry",
+          "file": "telemetry/opentelemetry.md",
+          "title": "OpenTelemetry",
+          "description": "Learn about the telemetry and monitoring capabilities of Pucora API Gateway using OTEL, enabling real-time visibility and analysis of API performance",
+          "weight": 20,
+          "section": "telemetry"
+        },
+        {
+          "slug": "telemetry/opentelemetry-layers-metrics",
+          "file": "telemetry/opentelemetry-layers-metrics.md",
+          "title": "OpenTelemetry - Layers and Metrics",
+          "description": "Learn about the metrics available when activating OpenTelemetry on Pucora API Gateway, enabling real-time visibility and analysis of API performance",
+          "weight": 21,
+          "section": "telemetry"
+        },
+        {
+          "slug": "telemetry/opentelemetry-by-endpoint",
+          "file": "telemetry/opentelemetry-by-endpoint.md",
+          "title": "OpenTelemetry by Endpoint",
+          "description": "Set different metrics and traces settings per endpoint or per backend individually, overriding existing OpenTelemetry settings that are defined at the service level",
+          "weight": 22,
+          "section": "telemetry"
+        },
+        {
+          "slug": "telemetry/prometheus",
+          "file": "telemetry/prometheus.md",
+          "title": "Prometheus",
+          "description": "Learn how to integrate Prometheus telemetry with Pucora API Gateway for efficient monitoring and performance analysis of your APIs",
+          "weight": 30,
+          "section": "telemetry"
+        },
+        {
+          "slug": "telemetry/grafana",
+          "file": "telemetry/grafana.md",
+          "title": "Grafana Dashboard",
+          "description": "Discover how to set up telemetry and monitoring for Pucora API Gateway using Grafana, gaining insights into performance and usage metrics",
+          "weight": 40,
+          "section": "telemetry"
+        },
+        {
+          "slug": "telemetry/influxdb",
+          "file": "telemetry/influxdb.md",
+          "title": "InfluxDB",
+          "description": "Integrate InfluxDB telemetry with Pucora API Gateway for efficient data collection, storage, and visualization of API performance metrics",
+          "weight": 50,
+          "section": "telemetry"
+        },
+        {
+          "slug": "telemetry/opencensus",
+          "file": "telemetry/opencensus.md",
+          "title": "OpenCensus (deprecated)",
+          "description": "The OpenCensus telemetry integration is now deprecated. All efforts are now put into OpenTelemetry.",
+          "weight": 60,
+          "section": "telemetry"
+        },
+        {
+          "slug": "telemetry/datadog",
+          "file": "telemetry/datadog.md",
+          "title": "Datadog",
+          "description": "Integrate Datadog telemetry with Pucora API Gateway for advanced monitoring, visualization, and analysis of your API ecosystem",
+          "weight": 90,
+          "section": "telemetry"
+        },
+        {
+          "slug": "telemetry/zipkin",
+          "file": "telemetry/zipkin.md",
+          "title": "Zipkin",
+          "description": "Integrate Zipkin telemetry to monitor and trace Pucora API Gateway requests efficiently for enhanced performance",
+          "weight": 100,
+          "section": "telemetry"
+        },
+        {
+          "slug": "telemetry/jaeger",
+          "file": "telemetry/jaeger.md",
+          "title": "Jaeger",
+          "description": "Integrate Jaeger telemetry with Pucora API Gateway for distributed tracing and monitoring of your microservices architecture",
+          "weight": 110,
+          "section": "telemetry"
+        },
+        {
+          "slug": "telemetry/xray",
+          "file": "telemetry/xray.md",
+          "title": "AWS X-Ray",
+          "description": "Push Pucora metrics to AWS X-Ray Telemetry with a small snippet of configuration to monitor and analyze Pucora API Gateway performance effectively",
+          "weight": 120,
+          "section": "telemetry"
+        },
+        {
+          "slug": "telemetry/stackdriver",
+          "file": "telemetry/stackdriver.md",
+          "title": "Google Cloud",
+          "description": "Monitor Pucora API Gateway using Google Cloud (formerly Stackdriver) for comprehensive insights and effective troubleshooting",
+          "weight": 130,
+          "section": "telemetry"
+        },
+        {
+          "slug": "telemetry/azure",
+          "file": "telemetry/azure.md",
+          "title": "Azure Monitor",
+          "description": "Integrate Azure Telemetry with Pucora for effective monitoring and performance analysis of your APIs. Follow our documentation to set up seamless integration with your Azure services.",
+          "weight": 140,
+          "section": "telemetry"
+        },
+        {
+          "slug": "telemetry/extended-metrics",
+          "file": "telemetry/extended-metrics.md",
+          "title": "Metrics API",
+          "description": "Explore the extended metrics available in Pucora API Gateway telemetry for detailed insights into API performance and usage",
+          "weight": 1000,
+          "section": "telemetry"
+        }
+      ]
+    },
+    {
+      "id": "logging",
+      "label": "Logging",
+      "pages": [
+        {
+          "slug": "logging",
+          "file": "logging.md",
+          "title": "Logging overview",
+          "description": "Learn how to implement Syslog and Stdout logging in Pucora API Gateway, enabling effective monitoring and troubleshooting of your API gateway and microservices",
+          "weight": 300,
+          "section": "logging"
+        },
+        {
+          "slug": "logging/graylog-gelf",
+          "file": "logging/graylog-gelf.md",
+          "title": "Logging to Graylog - GELF",
+          "description": "Integrate Graylog GELF logging with Pucora API Gateway for centralized log management and analysis of API logs",
+          "weight": 320,
+          "section": "logging"
+        },
+        {
+          "slug": "logging/logstash",
+          "file": "logging/logstash.md",
+          "title": "Logging in JSON (Logstash)",
+          "description": "Streamline log management and analysis by integrating Logstash with Pucora. Follow our documentation to set up seamless integration and gain valuable insights from your API logs.",
+          "weight": 360,
+          "section": "logging"
+        },
+        {
+          "slug": "logging/elk-integration",
+          "file": "logging/elk-integration.md",
+          "title": "Logging Dashboard (ELK)",
+          "description": "Learn how to integrate the ELK (Elasticsearch, Logstash, Kibana) stack for centralized logging and log analysis in Pucora API Gateway",
+          "weight": 390,
+          "section": "logging"
+        }
+      ]
+    },
+    {
+      "id": "extending",
+      "label": "Extending",
+      "pages": [
+        {
+          "slug": "extending",
+          "file": "extending.md",
+          "title": "How to extend Pucora?",
+          "description": "Learn how to extend Pucora API Gateway by developing custom plugins or scripts to add new functionalities and integrate with external systems",
+          "weight": -1,
+          "section": "extending"
+        },
+        {
+          "slug": "extending/writing-plugins",
+          "file": "extending/writing-plugins.md",
+          "title": "Writing plugins",
+          "description": "Learn how to extend the functionality of Pucora API Gateway by writing and building custom plugins, enabling custom business logic and workflows",
+          "weight": 10,
+          "section": "extending"
+        },
+        {
+          "slug": "extending/check-plugin",
+          "file": "extending/check-plugin.md",
+          "title": "Check plugin dependencies",
+          "description": "Learn how to check your custom Pucora plugins with the check-plugin command and ensure that your developments are compatible and loadable by Pucora during runtime.",
+          "weight": 30,
+          "section": "extending"
+        },
+        {
+          "slug": "extending/test-plugin",
+          "file": "extending/test-plugin.md",
+          "title": "Testing your plugins",
+          "description": "Learn how to test binary files that you compiled as plugins by loading them to Pucora and test their behavior before you deploy them to production.",
+          "weight": 30,
+          "section": "extending"
+        },
+        {
+          "slug": "extending/injecting-plugins",
+          "file": "extending/injecting-plugins.md",
+          "title": "Injecting plugins",
+          "description": "Discover the extensibility of Pucora API Gateway by learning how to inject custom plugins for adding new functionality and integration",
+          "weight": 40,
+          "section": "extending"
+        },
+        {
+          "slug": "extending/http-server-plugins",
+          "file": "extending/http-server-plugins.md",
+          "title": "HTTP server plugins",
+          "description": "Discover how to write HTTP server plugins for Pucora API Gateway, enabling you to customize server behaviors and implement custom logic.",
+          "weight": 100,
+          "section": "extending"
+        },
+        {
+          "slug": "extending/http-client-plugins",
+          "file": "extending/http-client-plugins.md",
+          "title": "HTTP client plugins",
+          "description": "Learn how to extend the functionality of Pucora API Gateway by utilizing HTTP client plugins, enabling customized communication with external services",
+          "weight": 110,
+          "section": "extending"
+        },
+        {
+          "slug": "extending/plugin-modifiers",
+          "file": "extending/plugin-modifiers.md",
+          "title": "Req/resp modifier plugins",
+          "description": "Learn how to extend the functionality of Pucora API Gateway by utilizing plugin modifiers, enabling customized request and response processing",
+          "weight": 120,
+          "section": "extending"
+        }
+      ]
+    },
+    {
+      "id": "grpc",
+      "label": "gRPC",
+      "pages": [
+        {
+          "slug": "grpc",
+          "file": "grpc.md",
+          "title": "Introduction to gRPC",
+          "description": "gRPC catalog setup, client backends, and server exposure on the Pucora gateway port",
+          "weight": 210,
+          "section": "grpc"
+        },
+        {
+          "slug": "grpc/server",
+          "file": "grpc/server.md",
+          "title": "gRPC Server",
+          "description": "Expose gRPC services on the same port as the Pucora HTTP gateway",
+          "weight": 220,
+          "section": "grpc"
+        }
+      ]
+    },
+    {
+      "id": "websockets",
+      "label": "WebSockets",
+      "pages": [
+        {
+          "slug": "websockets",
+          "file": "websockets.md",
+          "title": "WebSockets",
+          "description": "Bidirectional real-time communication using RFC-6455 WebSockets with multiplex and direct proxy modes",
+          "weight": 200,
+          "section": "websockets"
+        }
+      ]
+    },
+    {
+      "id": "async",
+      "label": "Async Agents",
+      "pages": [
+        {
+          "slug": "async",
+          "file": "async.md",
+          "title": "Event-Driven Async Agents",
+          "description": "Learn how to leverage asynchronous processing in Pucora API Gateway to implement an event based pattern",
+          "weight": 500,
+          "section": "async"
+        },
+        {
+          "slug": "async/amqp",
+          "file": "async/amqp.md",
+          "title": "AMQP driver for Async Agent",
+          "description": "Leverage Asynchronous AMQP Agents in Pucora for high-performance messaging and event-driven architectures",
+          "weight": 510,
+          "section": "async"
+        },
+        {
+          "slug": "async/kafka",
+          "file": "async/kafka.md",
+          "title": "Kafka Async Driver",
+          "description": "Background Kafka consumer agents that forward events to internal webhooks",
+          "weight": 520,
+          "section": "async"
+        }
+      ]
+    },
+    {
+      "id": "non-rest-connectivity",
+      "label": "Non-REST Connectivity",
+      "pages": [
+        {
+          "slug": "non-rest-connectivity",
+          "file": "non-rest-connectivity.md",
+          "title": "Introduction to Non-REST Connectivity",
+          "description": "Explore Pucora's non-REST connectivity features, including RabbitMQ integration, GraphQL, Lambda functions, event-driven async agents, and AMQP support.",
+          "weight": -10,
+          "section": "non-rest-connectivity"
+        }
+      ]
+    },
+    {
+      "id": "request-response-manipulation",
+      "label": "Request/Response",
+      "pages": [
+        {
+          "slug": "request-response-manipulation",
+          "file": "request-response-manipulation.md",
+          "title": "Manipulation toolkit",
+          "description": "Explore the request and response manipulation capabilities in Pucora API Gateway, allowing you to modify and enhance API responses for a better user experience",
+          "weight": -1,
+          "section": "request-response-manipulation"
+        }
+      ]
+    },
+    {
+      "id": "benchmarks",
+      "label": "Benchmarks",
+      "pages": [
+        {
+          "slug": "benchmarks",
+          "file": "benchmarks.md",
+          "title": "Benchmarks Overview",
+          "description": "Explore the performance benchmarks conducted with Pucora API Gateway to ensure optimal performance and scalability for your APIs.",
+          "weight": 1,
+          "section": "benchmarks"
+        },
+        {
+          "slug": "benchmarks/aws",
+          "file": "benchmarks/aws.md",
+          "title": "On Amazon Web Services",
+          "description": "Explore the benchmarking results of Pucora API Gateway running on Amazon Web Services (AWS), showcasing its performance and scalability",
+          "weight": 10,
+          "section": "benchmarks"
+        },
+        {
+          "slug": "benchmarks/api-gateway-benchmark",
+          "file": "benchmarks/api-gateway-benchmark.md",
+          "title": "Pucora vs others",
+          "description": "Explore the API gateway benchmarking capabilities of Pucora, measure performance, and optimize your API gateway for high throughput and low latency",
+          "weight": 10,
+          "section": "benchmarks"
+        },
+        {
+          "slug": "benchmarks/local",
+          "file": "benchmarks/local.md",
+          "title": "Local machine",
+          "description": "Performance tests of Pucora running on a local machine (laptop) with measurements of different concurrency levels.",
+          "weight": 15,
+          "section": "benchmarks"
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "label": "FAQ",
+      "pages": [
+        {
+          "slug": "faq",
+          "file": "faq.md",
+          "title": "Pucora F.A.Q",
+          "description": "Get quick answers to frequently asked questions about how Pucora works and the reason behind different responses.",
+          "weight": -1,
+          "section": "faq"
+        },
+        {
+          "slug": "faq/switch-versions",
+          "file": "faq/switch-versions.md",
+          "title": "Version upgrades",
+          "description": "Guidelines for upgrading Pucora Community Edition and validating configuration across versions.",
+          "weight": 20,
+          "section": "faq"
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2026-06-19T21:01:55.420Z"
+}

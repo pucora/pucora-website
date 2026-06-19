@@ -37,7 +37,7 @@ export const resourceNav: NavGroup = {
   label: 'Resources',
   items: [
     { label: 'GitHub Repository', href: externalLinks.github, description: externalLinks.githubLabel, external: true },
-    { label: 'Documentation', href: '/resources/documentation', description: 'Guides and reference' },
+    { label: 'Documentation', href: '/docs/overview', description: 'Guides and reference' },
     { label: 'Community', href: '/resources/community', description: 'GitHub and contributing' },
     { label: 'Features', href: '/features', description: 'Capability overview' },
     { label: 'Get Started', href: '/get-started', description: 'Install and run' },
@@ -58,7 +58,7 @@ export const footerColumns = [
   {
     title: 'Resources',
     links: [
-      { label: 'Documentation', href: '/resources/documentation' },
+      { label: 'Documentation', href: '/docs/overview' },
       { label: 'Get Started', href: '/get-started' },
       { label: 'Downloads', href: '/downloads' },
       { label: 'GitHub', href: externalLinks.github, description: externalLinks.githubLabel, external: true },

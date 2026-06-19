@@ -1,0 +1,33 @@
+Automatic validation as you type, showing documentation while hovering an attribute, explanation of errors, and autocompletion of properties, are features that you get automatically while working with Pucora.
+
+For users of **Visual Studio Code**, **Android Studio**, **JetBrains** editors (PHPStorm, PyCharm, GoLand, WebStorm, IntelliJ IDEA...), **Eclipse**, and other IDEs that have built-in json schema validation capabilities, there is nothing to install to have these features. Other editors can be used as well, but you will likely need to instal a JSON schema validator.
+
+This is how it could look like:
+
+![Visual Code integration](/images/documentation/pucora-ide-integration.png)
+
+## Editor integration for Pucora files
+Pucora has published an updated JSON-schema definition ([source](https://github.com/pucora/pucora-schema)) to validate configuration files from your IDE automatically. The editors with built-in json-schema validation will offer this feature **without installing any additional plugin**. All you need to do, is add in the beginning of your `pucora.json` configuration file a line specifying the schema:
+
+```json
+{
+    "$schema": "https://www.pucora.io/schema/v2.0/pucora.json"
+}
+```
+
+If you want to point to the latest version of Pucora, and not to a specific version, you can add:
+
+```json
+{
+    "$schema": "https://www.pucora.io/schema/pucora.json"
+}
+```
+
+There is nothing else you need to do!
+
+Part of the URL is the Pucora version you want to validate, notice that it does not contain the patch number (e.g.: `vA.B` instead of `vA.B.C`).
+
+## Highlighting on Flexible Configuration templates
+If you are working with flexible configuration, look in your favourite's editor marketplace extensions to deal with go `text/template` files (not html/template) that support code highlighting.
+
+Some editors also allow you the combination of templating + JSON format, so you can work with both.
