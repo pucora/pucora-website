@@ -4,9 +4,9 @@ export const codeSnippets = {
   binaryRun: './pucora run -c pucora.json',
   binaryBuild: 'make build',
   healthCheck: 'curl http://localhost:8080/__health',
-  configuratorInit: './bin/velonetics-config init -o my-profile.yaml',
-  configuratorPreset: './bin/velonetics-config presets apply kafka-pubsub -g ./output --compose',
-  configuratorGenerate: './bin/velonetics-config generate -f my-profile.yaml -o ./output',
-  configuratorValidate: './bin/velonetics-config validate -f my-profile.yaml',
+  configuratorInit: './bin/pucora-config init -o my-profile.yaml',
+  configuratorPreset: './bin/pucora-config presets apply kafka-pubsub -g ./output --compose',
+  configuratorGenerate: './bin/pucora-config generate -f my-profile.yaml -o ./output',
+  configuratorValidate: './bin/pucora-config validate -f my-profile.yaml',
   configCheck: 'pucora check -c ./output/pucora.json',
 } as const

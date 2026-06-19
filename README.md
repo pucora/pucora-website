@@ -1,6 +1,6 @@
 # Pucora Marketing Website
 
-KrakenD-style marketing site for [Pucora](https://github.com/pucora/velonetics-ce-master) — built with Vite, React, TypeScript, and Tailwind CSS.
+KrakenD-style marketing site for [Pucora](https://github.com/pucora/pucora-ce) — built with Vite, React, TypeScript, and Tailwind CSS.
 
 ## Quick start
 

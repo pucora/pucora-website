@@ -7,7 +7,7 @@ import { externalLinks } from '../../content/brand'
 
 const communityLinks = [
   {
-    title: 'GitHub — velonetics-ce',
+    title: 'GitHub — pucora-ce',
     description: 'Main repository — source code, issues, releases, and contributions.',
     href: externalLinks.github,
   },

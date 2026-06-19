@@ -12,8 +12,8 @@ export const brand = {
 
 export const externalLinks = {
   docs: 'https://docs.pucora.io',
-  github: 'https://github.com/pucora/velonetics-ce',
-  githubLabel: 'pucora/velonetics-ce',
+  github: 'https://github.com/pucora/pucora-ce',
+  githubLabel: 'pucora/pucora-ce',
   dockerHub: 'https://hub.docker.com/r/niteesh20/pucora',
   lura: 'https://luraproject.org',
   designer: 'https://designer.pucora.io',

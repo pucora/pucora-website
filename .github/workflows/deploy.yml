@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'velonetics-website/**'
+      - 'pucora-website/**'
   workflow_dispatch:
 
 permissions:
@@ -26,19 +26,19 @@ jobs:
         with:
           node-version: '22'
           cache: 'npm'
-          cache-dependency-path: velonetics-website/package-lock.json
+          cache-dependency-path: pucora-website/package-lock.json
 
       - name: Install dependencies
-        working-directory: velonetics-website
+        working-directory: pucora-website
         run: npm ci
 
       - name: Build
-        working-directory: velonetics-website
+        working-directory: pucora-website
         run: npm run build
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: velonetics-website/dist
+          path: pucora-website/dist
 
   deploy:
     needs: build

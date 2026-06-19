@@ -32,7 +32,7 @@ export const products: Product[] = [
     description:
       'A configuration tool that turns a simple YAML profile into a complete Pucora gateway setup — routes, CORS, JWT auth, pub/sub, gRPC, WebSockets, and more. No more hand-writing extra_config namespaces.',
     features: [
-      'Interactive wizard: velonetics-config init',
+      'Interactive wizard: pucora-config init',
       'Ready-made presets for Kafka, gRPC, WebSockets, SOAP, GraphQL',
       'Generates pucora.json + optional docker-compose',
       'Validates profiles before generation',
