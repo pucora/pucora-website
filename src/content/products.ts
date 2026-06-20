@@ -21,7 +21,7 @@ export const products: Product[] = [
       'JWT, OAuth2, rate limiting, circuit breakers',
       'OpenTelemetry, Prometheus, Jaeger integrations',
       'Go plugins, Lua, Martian, CEL extensibility',
-      'Docker image: niteesh20/pucora',
+      'Docker image: pucora/pucora',
     ],
     cta: { label: 'Get Pucora CE', href: '/get-started' },
   },

@@ -1,6 +1,6 @@
 export const codeSnippets = {
-  dockerRun: 'docker run -p 8080:8080 niteesh20/pucora:2.0.0 run -c /etc/pucora/pucora.json',
-  dockerPull: 'docker pull niteesh20/pucora:2.0.0',
+  dockerRun: 'docker run -p 8080:8080 pucora/pucora:2.0.0 run -c /etc/pucora/pucora.json',
+  dockerPull: 'docker pull pucora/pucora:2.0.0',
   binaryRun: './pucora run -c pucora.json',
   binaryBuild: 'make build',
   healthCheck: 'curl http://localhost:8080/__health',

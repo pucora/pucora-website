@@ -14,7 +14,7 @@ export const externalLinks = {
   docs: 'https://docs.pucora.io',
   github: 'https://github.com/pucora/pucora-ce',
   githubLabel: 'pucora/pucora-ce',
-  dockerHub: 'https://hub.docker.com/r/niteesh20/pucora',
+  dockerHub: 'https://hub.docker.com/r/pucora/pucora',
   lura: 'https://luraproject.org',
   designer: 'https://designer.pucora.io',
   schema: 'https://www.pucora.io/schema/v2.0/pucora.json',

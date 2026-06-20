@@ -11,7 +11,7 @@ const downloads = [
   {
     title: 'Docker Hub',
     description: 'Official Pucora CE container image.',
-    detail: 'niteesh20/pucora:2.0.0',
+    detail: 'pucora/pucora:2.0.0',
     href: externalLinks.dockerHub,
     command: codeSnippets.dockerPull,
   },
