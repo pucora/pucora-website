@@ -17,7 +17,7 @@ export const productNav: NavGroup = {
   items: [
     { label: 'Community Edition', href: '/products/community-edition', description: 'Open-source API Gateway' },
     { label: 'Configurator', href: '/products/configurator', description: 'YAML profiles to gateway config' },
-    { label: 'Lura Engine', href: '/products/lura', description: 'Framework behind Pucora' },
+    { label: 'Lura Engine', href: '/products/lura', description: 'API engine (Lura Project, originally developed by KrakenD)' },
     { label: 'All Products', href: '/products', description: 'Compare offerings' },
   ],
 }

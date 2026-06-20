@@ -10,7 +10,7 @@ export function ProductsIndex() {
     <MarketingPage
       title="Products"
       subtitle="Pucora Platform"
-      description="From the open-source Community Edition to the Configurator and Lura engine — everything you need to build and operate a high-performance API gateway."
+      description="From the open-source Community Edition to the Configurator and Lura-compatible engine — everything you need to build and operate a high-performance API gateway."
     >
       <section className="py-16">
         <Container>

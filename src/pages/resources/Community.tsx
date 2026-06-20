@@ -13,7 +13,7 @@ const communityLinks = [
   },
   {
     title: 'Lura Project',
-    description: 'The open framework behind Pucora, under the Linux Foundation.',
+    description: 'The Lura Project (originally developed by KrakenD) — an open framework under the Linux Foundation.',
     href: externalLinks.lura,
   },
   {

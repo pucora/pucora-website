@@ -1,6 +1,6 @@
 # Pucora Marketing Website
 
-KrakenD-style marketing site for [Pucora](https://github.com/pucora/pucora-ce) — built with Vite, React, TypeScript, and Tailwind CSS.
+Website for [Pucora](https://github.com/pucora/pucora-ce) — built with Vite, React, TypeScript, and Tailwind CSS.
 
 ## Quick start
 
@@ -23,7 +23,7 @@ Static output is in `dist/`.
 ## Site structure
 
 - **Home** — Hero, pillars, stats, features, testimonials, get started
-- **Products** — Community Edition, Configurator, Lura Engine
+-- **Products** — Community Edition, Configurator, Lura Engine (originally by KrakenD)
 - **Solutions** — Microservices/BFF, Event-driven, Legacy, Real-time
 - **Features** — 7 capability pages + connectivity hub (15 protocols)
 - **Resources** — Documentation, community, downloads

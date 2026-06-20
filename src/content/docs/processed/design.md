@@ -31,7 +31,7 @@ The working state is when the system is ready and can process the requests. When
 As the handler functions are in the previous step, **Pucora doesn't penalize the performance depending on the number of endpoints or the possible cardinality** of the URIs requested by the users.
 
 ## The important packages
-The Lura Project (Pucora's engine) is composed of a set of packages designed as building blocks for creating pipes and processors between an exposed endpoint and one or several API resources served by your backends.
+The Lura Project is composed of a set of packages designed as building blocks for creating pipes and processors between an exposed endpoint and one or several API resources served by your backends. Pucora is compatible with these packages and builds on similar design principles.
 
 ![Lura packages](/images/documentation/config-router-proxy-packages.png)
 

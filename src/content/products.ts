@@ -43,15 +43,15 @@ export const products: Product[] = [
   {
     slug: 'lura',
     name: 'Lura Engine',
-    tagline: 'The framework behind Pucora',
+    tagline: 'Lura-compatible API engine',
     description:
-      'The Lura Project is an open framework to assemble ultra-performance API Gateways with middlewares. Formerly the Pucora framework, now under the Linux Foundation. Build custom gateways or extend Pucora.',
+      'The Lura Project is an open framework to assemble ultra-performance API Gateways with middlewares. The Lura Project was originally developed by KrakenD and joined The Linux Foundation in 2021. Build custom gateways or extend Pucora with compatible tooling.',
     features: [
       'Go library for building API gateways and proxies',
       'Aggregator of many sources into single endpoints',
       'Supports HTTP(S), gRPC, and custom protocols',
       'Unix philosophy: small, independent, reusable components',
-      'Core service of the Pucora API Gateway',
+      'Engine compatible with Pucora CE',
     ],
     cta: { label: 'Explore Lura', href: '/products/lura' },
   },
