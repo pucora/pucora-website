@@ -2,7 +2,7 @@
   "name": "pucora-website",
   "private": true,
   "version": "0.0.0",
-  "homepage": ".".
+  "homepage": ".",
   "type": "module",
   "scripts": {
     "docs:build": "node scripts/build-docs.mjs",
