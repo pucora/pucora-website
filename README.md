@@ -39,3 +39,4 @@ Static output is in `dist/`.
 ## Deploy
 
 GitHub Actions workflow at `.github/workflows/deploy.yml` builds and deploys to GitHub Pages when pushed to `main`.
+
