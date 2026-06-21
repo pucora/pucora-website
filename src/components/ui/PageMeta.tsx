@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async'
-import { brand, externalLinks } from '../../content/brand'
+import { brand } from '../../content/brand'
 
 interface PageMetaProps {
   title?: string

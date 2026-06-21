@@ -6,7 +6,7 @@ Pucora needs **no programming** as it offers a declarative way to create the end
 
 Pucora focuses on being a pure Layer 7 API gateway, not coupled to the HTTP transport layer, and it has been in production in large Internet businesses since early 2017. [See who is using Pucora and use cases](/case-study/)
 
-Pucora is written in [Go](https://golang.org/). The [Lura Project](https://luraproject.org/), originally developed by KrakenD, joined The Linux Foundation in 2021. Pucora CE is a ready-to-use distribution that is compatible with the Lura engine and related tooling.
+Pucora is written in [Go](https://golang.org/). Our engine joined [The Linux Foundation on 2021](/blog/pucora-framework-joins-the-linux-foundation/) codenamed as the [Lura Project](https://luraproject.org/) and was previously known as the *Pucora Framework*.
 
 
 
