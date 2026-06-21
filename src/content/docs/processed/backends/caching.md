@@ -151,7 +151,7 @@ The [Martian module](/docs/backends/martian/) is the component that can transfor
 ```json
 {
     "version": 3,
-    "$schema": "https://www.pucora.io/schema/v2.0/pucora.json",
+    "$schema": "https://www.pucora.in/schema/v2.0/pucora.json",
     "endpoints": [
         {
             "endpoint": "/cached",

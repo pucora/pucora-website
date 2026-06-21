@@ -1,0 +1,62 @@
+# Pucora Website - AI/LLM Crawler Manifest
+
+## Website Overview
+Pucora is a stateless, distributed, high-performance API Gateway that helps you effortlessly run microservices and event-driven workloads. The website at https://pucora.in provides documentation, downloads, and information about Pucora's products and solutions.
+
+## Site Structure
+
+### Main Pages
+- **Home** (/) - Main landing page showcasing Pucora API Gateway features and benefits
+- **Get Started** (/get-started) - Quick start guide and installation instructions
+- **Downloads** (/downloads) - Docker images, releases, and schema downloads
+- **Products** (/products) - Product overview and detail pages
+- **Solutions** (/solutions) - Use case solutions and implementation guides
+- **Features** (/features) - Feature documentation and capabilities
+- **Resources** (/resources) - Documentation hub and community links
+- **Documentation** (/docs/*) - Comprehensive API Gateway documentation
+
+### Products
+1. **Community Edition** (/products/community-edition) - Open-source API Gateway
+2. **Configurator** (/products/configurator) - YAML profile to gateway config tool
+3. **Lura Engine** (/products/lura) - The framework behind Pucora
+
+### Solutions
+1. **Microservices & BFF** (/solutions/microservices-bff) - API aggregation for clients
+2. **Event-Driven** (/solutions/event-driven) - Kafka, RabbitMQ, NATS integration
+3. **Legacy Integration** (/solutions/legacy-integration) - SOAP/XML to REST/JSON
+4. **Real-Time** (/solutions/real-time) - WebSockets, gRPC, HTTP streaming
+
+### Key Features
+- API Aggregation - Multiple backend calls merged into single endpoint
+- Traffic Management - Rate limiting, circuit breakers, load balancing
+- Authentication - JWT, OAuth2, mTLS support
+- Services Connectivity - REST, gRPC, GraphQL, Kafka, WebSockets
+- Data Transformation - XML/JSON conversion, response filtering
+- Observability - OpenTelemetry, Prometheus, Jaeger integration
+- GitOps - Declarative, version-controlled configuration
+
+### Documentation Sections
+- Overview & Getting Started
+- Configuration & Configurator
+- Deploying (Docker, Kubernetes, Helm)
+- Endpoints & Backends
+- Authentication & Authorization
+- Telemetry & Observability
+- Throttling & Traffic Management
+- Logging
+- Extending with Plugins
+- gRPC & WebSockets
+- Async Agents (Kafka, AMQP)
+- Benchmarks
+- FAQ
+
+## External Links
+- Documentation: https://docs.pucora.in
+- GitHub: https://github.com/pucora/pucora-ce
+- Docker Hub: https://hub.docker.com/r/pucora/pucora
+- Lura Project: https://luraproject.org
+- Configurator Designer: https://designer.pucora.in
+- JSON Schema: https://www.pucora.in/schema/v2.0/pucora.json
+
+## Content Format
+All documentation pages are available in markdown format and cover API Gateway configuration, deployment, authentication, traffic management, and extensibility for the Pucora open-source API Gateway.

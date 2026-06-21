@@ -11,11 +11,11 @@ export const brand = {
 } as const
 
 export const externalLinks = {
-  docs: 'https://docs.pucora.io',
+  docs: 'https://docs.pucora.in',
   github: 'https://github.com/pucora/pucora-ce',
   githubLabel: 'pucora/pucora-ce',
   dockerHub: 'https://hub.docker.com/r/pucora/pucora',
   lura: 'https://luraproject.org',
-  designer: 'https://designer.pucora.io',
-  schema: 'https://www.pucora.io/schema/v2.0/pucora.json',
+  designer: 'https://designer.pucora.in',
+  schema: 'https://www.pucora.in/schema/v2.0/pucora.json',
 } as const

@@ -42,7 +42,7 @@ export const resourceNav: NavGroup = {
     { label: 'Features', href: '/features', description: 'Capability overview' },
     { label: 'Get Started', href: '/get-started', description: 'Install and run' },
     { label: 'Downloads', href: '/downloads', description: 'Docker and releases' },
-    { label: 'External Docs', href: externalLinks.docs, description: 'docs.pucora.io', external: true },
+    { label: 'External Docs', href: externalLinks.docs, description: 'docs.pucora.in', external: true },
   ],
 }
 

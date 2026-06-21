@@ -394,7 +394,7 @@ The `header.Id` is a modifier that sets a header with a **unique identifier (UUI
 ```json
 {
   "version": 3,
-  "$schema": "https://www.pucora.io/schema/v2.0/pucora.json",
+  "$schema": "https://www.pucora.in/schema/v2.0/pucora.json",
   "host": ["http://localhost:8080"],
   "echo_endpoint": true,
   "endpoints": [

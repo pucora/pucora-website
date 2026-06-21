@@ -50,7 +50,7 @@ The following example shows a configuration that takes the user IP from an `X-Fo
 
 ```json
 {
-  "$schema": "https://www.pucora.io/schema/v2.0/pucora.json",
+  "$schema": "https://www.pucora.in/schema/v2.0/pucora.json",
   "version": 3,
   "echo_endpoint": true,
   "extra_config": {

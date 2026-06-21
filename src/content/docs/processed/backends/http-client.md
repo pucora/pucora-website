@@ -14,7 +14,7 @@ Here is a configuration example:
 ```json
 {
   "version": 3,
-  "$schema": "https://www.pucora.io/schema/v2.0/pucora.json",
+  "$schema": "https://www.pucora.in/schema/v2.0/pucora.json",
   "endpoints": [
     {
       "endpoint": "/foo",

@@ -21,7 +21,7 @@ A simple`endpoints` section for a REST endpoint might look like this:
 
 ```json
 {
-  "$schema": "https://www.pucora.io/schema/v2.0/pucora.json",
+  "$schema": "https://www.pucora.in/schema/v2.0/pucora.json",
   "version": 3,
   "endpoints": [
     {
@@ -150,7 +150,7 @@ By default Pucora only works with **RESTful URL patterns** in its endpoint defin
 
 ```json
 {
-  "$schema": "https://www.pucora.io/schema/v2.0/pucora.json",
+  "$schema": "https://www.pucora.in/schema/v2.0/pucora.json",
   "version": 3,
   "disable_rest": true,
   "endpoints": [

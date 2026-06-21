@@ -2,7 +2,7 @@ Pucora is a **single binary file** that does not require any external libraries 
 
 
 [Download](/downloads)
-[Generate a config file](https://designer.pucora.io/)
+[Generate a config file](https://designer.pucora.in/)
 
 
 
@@ -23,7 +23,7 @@ docker run -p 8080:8080 -v $PWD:/etc/pucora/ pucora/pucora-ce:latest run --confi
 ```
 
 
-If you choose not to mount the volume (the `-v`), a default `pucora.json` serving a `/__health` endpoint will be used. The volume expects to find a `pucora.json` in the current directory ([generate your first here](https://designer.pucora.io/)).
+If you choose not to mount the volume (the `-v`), a default `pucora.json` serving a `/__health` endpoint will be used. The volume expects to find a `pucora.json` in the current directory ([generate your first here](https://designer.pucora.in/)).
 
 ### AWS and Azure VM
 See the [downloads page](/downloads) for pre-built virtual machines in Azure and AWS.

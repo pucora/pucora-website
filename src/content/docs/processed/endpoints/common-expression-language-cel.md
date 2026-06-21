@@ -138,7 +138,7 @@ This is an example of accessing claims in a `backend` expression, through propag
 
 ```json
 {
-  "$schema": "https://www.pucora.io/schema/v2.0/pucora.json",
+  "$schema": "https://www.pucora.in/schema/v2.0/pucora.json",
   "version": 3,
   "endpoints": [
     {

@@ -1,11 +1,11 @@
-The [Designer](https://designer.pucora.io) is a UI that allows you to create Pucora configurations from scratch or resume editing an existing one. It is a tool very useful in your **early contact with Pucora**, as it helps you try functionalities without having to learn the different attributes of the configuration.
+The [Designer](https://designer.pucora.in) is a UI that allows you to create Pucora configurations from scratch or resume editing an existing one. It is a tool very useful in your **early contact with Pucora**, as it helps you try functionalities without having to learn the different attributes of the configuration.
 
 **The designer is a learning tool** more than an administration one. Pucora configuration and administration is designed with **GitOps** in mind (under the version control system and released through CI/CD).
 
 Combined with a [`:watch` container](/docs/developer/hot-reload/), you can **apply configuration changes automatically** in a development environment.
 
 
-[Open designer](https://designer.pucora.io)
+[Open designer](https://designer.pucora.in)
 
 
 

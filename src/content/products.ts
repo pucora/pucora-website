@@ -36,7 +36,7 @@ export const products: Product[] = [
       'Ready-made presets for Kafka, gRPC, WebSockets, SOAP, GraphQL',
       'Generates pucora.json + optional docker-compose',
       'Validates profiles before generation',
-      'apiVersion: configurator.pucora.io/v1',
+      'apiVersion: configurator.pucora.in/v1',
     ],
     cta: { label: 'Learn Configurator', href: '/products/configurator' },
   },

@@ -19,7 +19,7 @@ To enable it you need a configuration like this:
 ```json
 {
   "version": 3,
-  "$schema": "https://www.pucora.io/schema/v2.0/pucora.json",
+  "$schema": "https://www.pucora.in/schema/v2.0/pucora.json",
   "tls": {
     "enable_mtls": true,
     "ca_certs": [
@@ -134,7 +134,7 @@ The Pucora configuration needed is as follows (no endpoints used for this demo):
 ```json
 {
   "version": 3,
-  "$schema": "https://www.pucora.io/schema/v2.0/pucora.json",
+  "$schema": "https://www.pucora.in/schema/v2.0/pucora.json",
   "port": 443,
   "tls": {
     "enable_mtls": true,
